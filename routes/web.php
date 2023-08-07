@@ -18,6 +18,18 @@ Route::get('/', [EventController::class,'home']);
 
 Route::get('/chiaperini', [EventController::class,'chiaperiniPage']);
 
+Route::get('/colaborador/{id}', [EventController::class,'ccolaboradorPage']);
+
 Route::post('/chiaperini', [EventController::class,'chiaperiniPage']);
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

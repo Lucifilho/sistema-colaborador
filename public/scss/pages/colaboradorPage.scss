@@ -1,0 +1,107 @@
+@import "../variaveis.scss";
+
+
+.colaborador{
+
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 1200px;
+
+    .dados{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 420px !important;
+        align-items: center;
+        padding: 20px !important;
+        justify-content: space-between;
+        border: 1px solid $cinza;
+        -webkit-box-shadow: 5px 5px 10px 5px $cinza;
+        -moz-box-shadow: 5px 5px 10px 5px $cinza;
+        box-shadow: 5px 5px 10px 5px $cinza;
+
+        .group{
+
+            display: flex;
+            width: 100%;
+            max-width: 250px;
+            font-size: $fs_18;
+            border-bottom: 1px solid $azulPrincipal;
+            min-height: 80px;
+            padding: 5px 0;
+
+
+            .labelCampo{
+
+                width: 100%;
+                max-width: 120px;
+                align-self: center;
+                font-weight: bold;
+
+            }
+
+            .valorCampo,a{
+
+                width: 100%;
+                max-width: 220px !important;
+                text-align: center;
+                align-self: center;
+
+            }
+
+            a{
+
+                background-color: $azulPrincipal;
+                color: $branco;
+                font-weight: bold;
+                width: 100%;
+                max-width: 150px;
+                padding: 5px 0;
+
+
+                &:hover{
+
+                    background-color: $branco;
+                    border: 2px solid $azulPrincipal;
+                    color: $azulPrincipal;
+
+                }
+            }
+
+            #ramalNum{
+
+                display: flex;
+            }
+
+            #ramal{
+
+                display: none;
+            }
+        }
+
+        .action{
+
+            border-bottom: 1px solid $azulPrincipal;
+            padding-bottom: 5px;
+        }
+
+        .lastGroup{
+            
+            border-bottom: none ;
+        }
+    }
+
+    .infoExtras{
+
+        display: flex;
+        flex-direction: column;
+        background-color: $cinza;
+        width: 100%;
+        max-width: 800px;
+        gap: 20px;
+        padding: 20px !important;
+    }
+
+}

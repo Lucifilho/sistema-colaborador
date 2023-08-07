@@ -1,8 +1,40 @@
-@import "pages/chiaperini";
+@import "pages/chiaperini","pages/colaboradorPage", "variaveis";
 
 
 
 .pagination{
 
     justify-content:center;
+}
+
+main{
+
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+
+    .container{
+        
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+
+ul{
+
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+a{
+
+    text-decoration: none;
+
+    &:hover{
+
+        text-decoration: none !important;
+    }
 }

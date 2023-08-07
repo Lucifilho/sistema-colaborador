@@ -2,28 +2,17 @@
 @section('content')
 
 
-<div class="chiaperini">
+<main class="mainChiaperini">
+    <div class="container" width="100%">
 
+        <h1 class="title1">Lista de Ramais</h1>
+        
+        <livewire:pessoa /> 
+
+        
+</main>
             
-    <livewire:pessoa /> 
+    
 
-
-    @if(count($pessoas)==0 && $search)
-
-    <span class="msg">Nenhum filme encontrado com {{$search}}</span>
-
-    @elseif(count($pessoas)==0)
-
-    <span class="msg">Nenhum filme registrado ainda</span>
-
-    @endif
-
-    <div class="navigation">
-
-    {{$pessoas -> links()}}
-
-    </div>
-
-</div>
 
 @endsection

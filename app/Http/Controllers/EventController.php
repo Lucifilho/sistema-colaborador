@@ -23,6 +23,18 @@ class EventController extends Controller
 
     }
 
+    public function ccolaboradorPage (Request $id){
+
+
+        $pessoas = Pessoa::findOrFail($id);
+
+        return view('pages.home' , ['pessoas' => $pessoas]);
+
+
+        return view('pages.colaboradorPage' , ['pessoas' => $pessoas]);
+
+    }
+
     public function chiaperiniPage (){
 
         $search = "ola";
