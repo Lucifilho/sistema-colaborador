@@ -1,6 +1,30 @@
-@import "pages/chiaperini","pages/colaboradorPage", "variaveis";
+@import "pages/chiaperini","pages/colaboradorPage", "variaveis","pages/editColaborador","pages/novoColaborador",
+"components/header", "components/footer","components/main";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk');
+
+*{
+
+    font-family: 'Space Grotesk', sans-serif;
+}
 
 
+#msg{
+
+    background-color: $cinza;
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    padding: 8px;
+    font-weight: 700;
+    color: $azulPrincipal;
+    animation-name: example 5s;
+
+   
+}
 
 .pagination{
 
@@ -36,5 +60,16 @@ a{
     &:hover{
 
         text-decoration: none !important;
+    }
+}
+
+
+button{
+
+    border: none;
+
+    &:focus-visible{
+
+        outline:none;
     }
 }

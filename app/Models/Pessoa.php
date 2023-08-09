@@ -15,7 +15,8 @@ class Pessoa extends Model
         'Nome',
         'Whatsapp',
         'Departamento',
-        'Unidade'
+        'Unidade',
+        'Skype'
     ];
 
     protected $casts = [
@@ -31,8 +32,8 @@ class Pessoa extends Model
 
         $term = "%$term%";
         $query-> where(function($query) use ($term){
-            $query->where('Nome','LIKE',$term)
-                ->orWhere('Unidade','LIKE',$term);
+            $query->where('Nome','LIKE',$term);
+                
         });
     }
 }

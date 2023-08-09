@@ -1,7 +1,11 @@
 @extends('layouts.main')
 @section('content')
+<div id="msg">Colaborador alterado com sucesso</div>
+
+
 
     <div class="colaborador">
+
         
         <ul class="dados">
 
@@ -27,14 +31,37 @@
 
                 <a  href="tel:{{$pessoa -> Ramal}}">Ligar</a>
 
-            </li>    
+            </li>  
             <li class="group action">
                 
                 <span class="labelCampo">Skype</span>
                 
-                <a href="skype">Conversar</a>
+                @if($pessoa -> Skype != '') 
 
-            </li>     
+                    <a target="_blank" href="{{$pessoa -> Skype}}">Conversar</a>
+
+                @else
+
+                    <span class="valorCampo">Não possui</span>
+                    
+                @endif
+                
+
+
+            </li>   
+            <li class="group action">
+                
+                <span class="labelCampo">Whatsapp</span>
+                @if($pessoa -> Whatsapp != '') 
+                <a target="_blank" href="https://api.whatsapp.com/send?phone={{$pessoa -> Whatsapp}}"> Contatar</a>
+
+                @else
+                    <span class="valorCampo">Não possui</span>
+                @endif
+            
+
+            </li>    
+            
             <li class="group">
                 
                 <span class="labelCampo">Unidade</span>
@@ -42,13 +69,20 @@
                 <span class="valorCampo">{{$pessoa -> Unidade}}</span>
 
             </li>    
-            <li class="group lastGroup">
+            <li class="group ">
                 
                 <span class="labelCampo">Departamento</span>
                 
                 <span class="valorCampo">{{$pessoa -> Departamento}}</span>
 
-            </li>     
+            </li>
+            @auth    
+            <li class="group lastGroup">
+                
+                <a class="btnSimples" href="/editar-colaborador/{{$pessoa -> id}}">Editar</a>
+                
+            </li>
+            @endauth  
                        
 
         </ul>
@@ -97,6 +131,8 @@
 
 
     <script>
+
+
 
         var ramal = document.getElementById("ramal");
 

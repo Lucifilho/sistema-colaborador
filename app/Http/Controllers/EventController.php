@@ -4,8 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pessoa;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Departamento;
+use App\Models\Unidade;
+use Illuminate\Http\Request as Requests;
+use Request;
+use DB;
+use URL;
+
+
 
 
 
@@ -16,26 +22,93 @@ class EventController extends Controller
 
     public function home (){
 
+        $path= Requests::path();
+
         $pessoas = Pessoa::paginate(15);
 
-
-        return view('pages.home' , ['pessoas' => $pessoas]);
-
-    }
-
-    public function ccolaboradorPage (Request $id){
-
-
-        $pessoas = Pessoa::findOrFail($id);
-
-        return view('pages.home' , ['pessoas' => $pessoas]);
-
-
-        return view('pages.colaboradorPage' , ['pessoas' => $pessoas]);
+        return view('pages.home' , ['pessoas' => $pessoas,'path'=> $path]);
 
     }
 
-    public function chiaperiniPage (){
+    public function colaboradorPage ($id){
+
+
+        $pessoa = Pessoa::findOrFail($id);
+
+
+        return view('pages.colaboradorPage' , ['pessoa' => $pessoa]);
+
+    }
+
+
+    public function editarColaboradorPage ($id){
+
+
+        $pessoa = Pessoa::findOrFail($id);
+
+        $departamentos = Departamento::all();
+
+        $unidades = Unidade::all();
+
+        return view('pages.editarColaboradorPage' , ['pessoa' => $pessoa,'departamentos'=> $departamentos,'unidades' => $unidades]);
+
+    }
+
+
+    public function editarColaborador (Request $request){
+
+
+        $data = $request -> all();
+
+        Pessoa::findOrFail($request -> id) -> update($data);
+
+        return redirect('/colaborador/'.$request -> id)->with('msg','Colaborador alterado com sucesso');
+
+
+    }
+
+    public function novoColaboradorPage (){
+
+        $departamentos = Departamento::all();
+
+        $unidades = Unidade::all();
+    
+        return view('pages.novoColaborador',['departamentos'=> $departamentos,'unidades' => $unidades] );
+
+    }
+
+    public function novoColaborador(Requests $request){
+
+        $pessoa = new Pessoa();
+
+        $pessoa -> Ramal = $request -> Ramal;
+        $pessoa -> Nome = $request -> Nome;
+        $pessoa -> Whatsapp = $request -> Whatsapp;
+        $pessoa -> Departamento = $request -> Departamento;
+        $pessoa -> Unidade = $request -> Unidade;
+        $pessoa -> Skype = $request -> Skype;
+
+
+        $pessoa -> save();
+
+        return redirect('/registrar-colaborador')-> with('msg','Colaborador cadastrado(a) com sucesso');
+    }
+
+    public function excluirColaborador($id){
+
+
+        $pessoa = Pessoa::findOrFail($id);
+
+        $id = $pessoa -> id;
+
+        Pessoa::findOrFail($id)->delete();
+
+        return redirect('/chiaperini' )->with('msg','Colaborador excluído(a) com sucesso');
+    }
+
+    public function ramaisPage (){
+
+        $path= Request::path();
 
         $search = "ola";
 
@@ -43,24 +116,11 @@ class EventController extends Controller
         
         $all = Pessoa::all();
 
-        //dd($registros);
+    
 
-        foreach ($pessoas as $pessoa){
-
-            $nome = $pessoa-> nome;
-
-            
-        }
-
-
-        $dashboard=DB::table('Pessoas')
-        ->where('Nome', $nome)
-        ->orderBy('Unidade')
-        ->get();
-
-        return view('pages.chiaperini' , [
+        return view('pages.ramais' , [
             'pessoas' => $pessoas, 'search'=> $search, 
-            'dashboard' => $dashboard ]);
+            'path' => $path ]);
         
             
        

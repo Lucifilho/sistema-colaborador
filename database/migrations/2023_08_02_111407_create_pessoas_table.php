@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('Whatsapp')->nullable()->default(NULL);
             $table->string('Departamento')->nullable()->default(NULL);
             $table->string('Unidade')->nullable()->default(NULL);
+            $table->string('Skype')->nullable()->default(NULL);
             $table->timestamps();
         });
     }

@@ -16,11 +16,38 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class,'home']);
 
-Route::get('/chiaperini', [EventController::class,'chiaperiniPage']);
+Route::get('/chiaperini', [EventController::class,'ramaisPage']);
 
-Route::get('/colaborador/{id}', [EventController::class,'ccolaboradorPage']);
+Route::get('/techto', [EventController::class,'ramaisPage']);
 
-Route::post('/chiaperini', [EventController::class,'chiaperiniPage']);
+Route::get('/techtopel', [EventController::class,'ramaisPage']);
+
+
+Route::get('/chiaperini-pro', [EventController::class,'ramaisPage']);
+
+Route::get('/mercadao-lojista', [EventController::class,'ramaisPage']);
+
+Route::get('/fnc', [EventController::class,'ramaisPage']);
+
+
+Route::get('/colaborador/{id}', [EventController::class,'colaboradorPage'])->middleware('auth');
+
+Route::get('/editar-colaborador/{id}', [EventController::class,'editarColaboradorPage'])->middleware('auth');
+
+Route::get('/registrar-colaborador', [EventController::class,'novoColaboradorPage'])->middleware('auth');
+
+
+
+/** Rotas de execução*/
+
+Route::post('registrar-colaborador', [EventController::class,'novoColaborador']);
+
+Route::post('/chiaperini', [EventController::class,'ramaisPage']);
+
+Route::put('/colaborador/{id}', [EventController::class,'editarColaborador']);
+
+Route::delete('excluir-colaborador/{id}', [EventController::class,'excluirColaborador']);
+
 
 
 

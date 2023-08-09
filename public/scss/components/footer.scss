@@ -1,0 +1,100 @@
+@import "../variaveis.scss";
+
+footer{
+    
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $azulPrincipal;
+    gap: 20px;
+    padding: 10px 0;
+
+    .help{
+        
+        display: flex;
+        justify-content: center;
+        color: $branco;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+        max-width: 1200px;
+        font-weight: 600 !important;
+        font-size: $fs_18 !important;
+    }
+
+    .atalhos {
+        
+        width: 100%;
+        max-width: 1110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+        img {
+
+            display: flex;
+            width: 100%;
+            max-width: 750px;
+        }
+    }
+
+    .dataUp{
+        
+        font-size: 14px;
+        font-weight: 600;
+        color: $branco;
+    }
+}
+
+
+footer.chiaperini{
+
+    background-color: $azulPrincipal;
+
+    .help{
+        
+        color: $branco;
+    }
+
+    .dataUp{
+        
+        color: $branco;
+    }
+
+}
+
+footer.techto{
+
+    background-color: $vermelhoTechto;
+
+    .help{
+        
+        color: $branco;
+    }
+
+    .dataUp{
+        
+        color: $branco;
+    }
+
+
+}
+
+footer.mercadao-lojista{
+
+    background-color: $vermelhoPrincipal;
+
+    .help{
+        
+        color: $branco;
+    }
+
+    .dataUp{
+        
+        color: $branco;
+    }
+
+
+}

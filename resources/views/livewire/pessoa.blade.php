@@ -1,4 +1,11 @@
-<div>
+<div class="bladeRamal">
+
+    <div class="cabecalho">    
+        
+        <h1 class="title1">Lista de Ramais</h1>
+    
+    </div>
+
     <div class="pesquisa">
         
         <input wire:model="search" type="text" class="form-control" placeholder="Digite aqui, Nome, Ramal, Departamento, ou Unidade do colaborador"/>
@@ -26,7 +33,16 @@
         <tbody><!-- Aqui você pode adicionar as linhas da tabela. -->
     
             @foreach($pessoas as $pessoa)    
-                <tr><td>{{$pessoa -> Ramal}}</td><td><a href="/colaborador/{{$pessoa -> id}}">{{$pessoa -> Nome}}</a></td><td>{{$pessoa -> Whatsapp}}</td><td>{{$pessoa -> Departamento}}</td><td>{{$pessoa -> Unidade}}</td><td><a class="btnLigar" href="tel:{{$pessoa -> ramal}}">Ligar</a></td></tr>
+                <tr><td>{{$pessoa -> Ramal}}</td><td>
+                    
+                    @auth
+                    <a href="/colaborador/{{$pessoa -> id}}">{{$pessoa -> Nome}}</a>
+                    @elseguest
+                    {{$pessoa -> Nome}}
+                    @endguest
+                
+                
+                </td><td>{{$pessoa -> Whatsapp}}</td><td>{{$pessoa -> Departamento}}</td><td>{{$pessoa -> Unidade}}</td><td><a class="btnLigar" href="tel:{{$pessoa -> ramal}}">Ligar</a></td></tr>
             @endforeach
         
         
@@ -37,17 +53,14 @@
 
     @if(count($pessoas)==0 && $search)
 
-            <span class="msg">Nenhum Colaborador encontrado com {{$search}}</span>
+            <span class="msg">Nenhum resultado encontrado com {{$search}}</span>
 
         @elseif(count($pessoas)==0)
 
-            <span class="msg">Nenhum Colaborador registrado ainda</span>
+            <span class="msg">Nenhum resultado registrado ainda</span>
 
         @endif
-
-        
-        
-
+      
             <div class="navigation">
 
                 {{$pessoas -> links()}}

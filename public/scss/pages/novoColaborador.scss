@@ -1,0 +1,73 @@
+@import "../variaveis.scss";
+
+.novoColaborador{
+
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    form{
+
+        width: 100%;
+        max-width: 500px;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        -webkit-box-shadow: 5px 5px 10px 5px $cinza;
+        -moz-box-shadow: 5px 5px 10px 5px $cinza;
+        box-shadow: 5px 5px 10px 5px $cinza;
+
+        .group{
+
+            width: 100%;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            .campo{
+
+                font-size: $fs_20;
+                font-weight: 700;
+
+            }
+
+            .valor{
+
+                background-color: $cinza;
+                border:none;
+                padding: 5px;
+
+                &:focus-visible{
+
+                    outline: none !important;
+                }
+            }
+        }
+
+        .botoes{
+
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            gap: 20px;
+
+
+            .btnSimples{
+                
+                background-color: $azulPrincipal;
+                font-weight: bold;
+                color: $branco;
+                width: 100px;
+                text-align: center;
+                padding: 5px;
+                font-size: $fs_20;
+
+            }
+        }
+    }
+}

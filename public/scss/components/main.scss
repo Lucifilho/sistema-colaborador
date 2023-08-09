@@ -1,0 +1,315 @@
+@import "../variaveis.scss";
+
+
+main{
+
+    padding: 20px 0;
+
+    .ramal{
+
+        .bladeRamal{
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .cabecalho{
+
+                align-self: center;
+                display: flex;
+
+                h1{
+
+                    font-weight: bolder;
+
+                }
+            }
+
+
+            table{
+        
+                background-color: $branco;
+                border-radius: 5px;
+        
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                         
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        .firstTh{
+
+                            border-radius: 5px 0 0 0  !important;
+                        }
+
+                        .lastTh{
+
+                            border-radius: 0 5px 0 0  !important;
+                        }
+                    }
+                }
+            
+            
+                tbody{
+            
+                    border-radius: 0px !important;   
+            
+                    tr{
+
+                        border-radius: 0px !important;            
+            
+                        td{
+
+                            border-radius: 0px !important;   
+            
+                            text-align: center;
+                            font-weight: 600;
+                            text-transform: capitalize;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                               
+                                font-weight: bold;
+                                padding: 8px 20px;
+                                border-radius: 3px;
+            
+            
+                            }
+                        }
+                    }
+                }
+            }
+        
+           
+        }
+    }
+}
+
+main.chiaperini{
+
+    background-color: $azulPrincipal;
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $branco;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $amareloPrincipal;              
+                            color: $azulPrincipal;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $azulPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $azulPrincipal;
+                                    border: 1px solid $azulPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $azulClaro;
+            }
+        }
+    }
+}
+
+main.techto{
+
+    background-color: $vermelhoTechto;
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $amareloPrincipal;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $vermelhoPrincipal;              
+                            color: $branco;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $vermelhoPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $vermelhoTechto;
+                                    border: 1px solid $vermelhoTechto;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $amareloClaro;
+            }
+        }
+    }
+}
+
+main.mercadao-lojista{
+
+    background-color: $amareloMercadao;
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $amareloPrincipal;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $vermelhoPrincipal;              
+                            color: $branco;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $vermelhoPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $vermelhoTechto;
+                                    border: 1px solid $vermelhoTechto;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $amareloClaro;
+            }
+        }
+    }
+}

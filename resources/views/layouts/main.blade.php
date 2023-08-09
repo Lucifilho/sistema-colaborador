@@ -9,7 +9,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         @livewireStyles
 
 
@@ -19,23 +23,53 @@
     <body class="body">
 
 
-        <header>
+        <header class="{{$path}}">
 
             <nav class="nav">
 
                 <a class="nav-link" href="/chiaperini">Chiaperini</a>
-                <a class="nav-link" href="/chiaperinipro">Chiaperini Pro</a>
+                <a class="nav-link" href="/chiaperini-pro">Chiaperini Pro</a>
                 <a class="nav-link" href="/techto">Techto</a>
-                <a class="nav-link" href="/mercadaolojista">Mercadão Lojista</a>
-                <a class="nav-link" href="/fnc">Fundição Natividade</a>
+                <a class="nav-link" href="/mercadao-lojista">Mercadão Lojista</a>
+                <a class="nav-link" href="/fnc">FNC</a>
             </nav>
             <div class="linksEmergencia">
 
-                <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+                @if ($path == 'chiaperini')
+
+                    
+                    <a class="portaria" href="tel:7212"><i class="fa-solid fa-phone"></i><span>Telefonista</span> </a>
+
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+
+                    <a class="portaria" href="tel:7262"><i class="fa-solid fa-phone-volume"></i><span>SAC</span> </a>
+
+                   
+                @elseif($path == 'techto')
+
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+                
+                    <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>   
+ 
+                @elseif($path == 'chiaperini-pro')
+  
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+                    
+                    <a class="portaria" href="tel:7212"><i class="fa-solid fa-phone"></i><span>Telefonista</span> </a>
+
+                    
+                @elseif($path == 'mercadao-lojista')
+
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+                
+                    <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>
+
+                @endif
+
                 
             </div>
         </header>
-        <main>
+        <main class="{{$path}}">
 
             <div class="container">
 
@@ -48,19 +82,40 @@
             </div>
 
         </main>
-        <footer class="footer">
+        <footer class="{{$path}}">
 
-            <div class="container">
+            <div class="aviso">
 
-                <span class="description">Copyright &copy Chiaperini.
-                    Todos os direitos reservados a <a  href="https://chiaperini.com.br/" rel="noopener" target="_blank" >Chiaperini</a>.
+                <span class="help">
+                    Caso algum ramal esteja incorreto, por favor, clique no botão localizado à direita
+                    para entrar em contato com o Suporte.<br> A lista de ramais foi atualizada em : 10/07/2023.
                 </span>
-
+        
             </div>
+        
+            <div class="atalhos">
+        
+        
+                <img src="/imagens/ATALHOS MICROSIP (1).png">
+        
+            </div>
+        
+            
 
         </footer>
 
         @livewireScripts
+
+        <script>
+
+            var msg = document.getElementById("msg");
+
+            setTimeout(function(){hide(msg);}, 3800);
+            function hide(element){
+            element.style.display="none";
+            }
+
+        </script>
 
     </body>
 </html>

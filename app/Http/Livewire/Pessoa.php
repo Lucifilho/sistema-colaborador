@@ -3,8 +3,7 @@
 namespace App\Http\Livewire;
 use App\Models\Pessoa as Pessoas;
 use Livewire\Component;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Unidade;
 use Request;
 
 
@@ -13,20 +12,34 @@ class Pessoa extends Component
 {
     public $search = '';
 
-    public function render()
-    {
+    public function render(){
 
 
         $search =  $this->search;
-        $url = REQUEST::path();
+
+        $path= Request::path();
+
+        
+        if ( $search ){
+
+            $unidades = Unidade::all();
+
+            foreach ($unidades as $unidade){
+
+                $nomeUnidade = $unidade-> nomeUnidade;
+
+            }
+
+            if($path == 'chiaperini-pro'){
+
+                $path = 'chiaperini';
+            }else{
+
+                $path = 'Techto';
+            } 
 
 
-
-        if ($search){
-
-
-
-            $pessoas = Pessoas::where('Unidade','Chiaperini')->where(  function ($query) use( $search){
+            $pessoas = Pessoas::where('Unidade', $path )->where(  function ($query) use( $search){
                 $query->where('Nome', 'like', '%' .  $this->search . '%' )
                     ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
                     ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
@@ -36,18 +49,27 @@ class Pessoa extends Component
             ->orderBy('Departamento')
             ->orderBy('Nome')
             ->paginate(10);
-
-
         
         }else{
 
-            $pessoas = Pessoas::where('Unidade','Chiaperini')
+            if($path == 'chiaperini-pro'){
+
+                $path = 'chiaperini pro';
+                
+            }elseif($path == 'mercadao-lojista'){
+
+                $path = 'mercadão lojista';
+            }else{
+
+                $path = $path;
+            } 
+
+            $pessoas = Pessoas::where('Unidade',$path)
             ->orderBy('Departamento')
             ->orderBy('Nome')
             ->paginate(10);
 
         }
-
 
 
         return view('livewire.pessoa',[
