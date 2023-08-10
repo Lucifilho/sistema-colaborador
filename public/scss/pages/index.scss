@@ -1,0 +1,95 @@
+@import "../variaveis.scss";
+
+
+.indexPage{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+
+    .titulo{
+
+        h1{
+
+            font-size: 70px;
+            font-weight: 500;
+
+            .negrito{
+
+                font-weight: bold;
+            }
+        }
+
+       
+    }
+
+    .escolhas{
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .chose{
+            
+            padding: 20px 50px;
+            background-color: $cinza;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+
+            h2{
+                
+                font-size: $fs_18;
+                font-weight: 600;
+                margin: 0;
+            }
+        }            
+
+        #listaLinks{
+
+            flex-direction: column;
+            gap: 10px ;
+            width: 600px;
+            margin: 0;
+            padding: 0;
+            
+            li{
+
+                width: 600px;
+                list-style-type: none;
+
+                
+                .link{
+                            
+                    display: flex;
+                    width: 100%;
+                    color: $preto;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border: 2px $preto solid ;
+                    padding: 10px 0px 10px 50px;                                        
+                    border-radius: 20px;
+
+                    &:hover{
+
+                        background-color: $preto;
+                        transform: scale(1.05);
+                        color: $branco;
+
+                    }
+
+                    
+
+                }
+            }
+
+        }
+        
+    }
+    
+}

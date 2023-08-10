@@ -29,42 +29,53 @@
 
                 <a class="nav-link" href="/chiaperini">Chiaperini</a>
                 <a class="nav-link" href="/chiaperini-pro">Chiaperini Pro</a>
-                <a class="nav-link" href="/techto">Techto</a>
-                <a class="nav-link" href="/mercadao-lojista">Mercadão Lojista</a>
                 <a class="nav-link" href="/fnc">FNC</a>
+                <a class="nav-link" href="/mercadao-lojista">Mercadão Lojista</a>
+                <a class="nav-link" href="/techto">Techto</a>
+                <a class="nav-link" href="/techtopel">TechtoPel</a>
             </nav>
             <div class="linksEmergencia">
+
+                <a class="home" href="/"><i class="fa-solid fa-home"></i><span>Home</span> </a>
+
 
                 @if ($path == 'chiaperini')
 
                     
                     <a class="portaria" href="tel:7212"><i class="fa-solid fa-phone"></i><span>Telefonista</span> </a>
 
+                    <a class="portaria" href="tel:7262"><i class="fa-solid fa-phone-volume"></i><span>SAC</span> </a>
+
                     <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
 
-                    <a class="portaria" href="tel:7262"><i class="fa-solid fa-phone-volume"></i><span>SAC</span> </a>
 
                    
                 @elseif($path == 'techto')
-
-                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
                 
                     <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>   
- 
+
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+
                 @elseif($path == 'chiaperini-pro')
   
-                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
-                    
                     <a class="portaria" href="tel:7212"><i class="fa-solid fa-phone"></i><span>Telefonista</span> </a>
 
-                    
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+
                 @elseif($path == 'mercadao-lojista')
 
+                    <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>
+                    
                     <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+
+                @elseif($path == 'fnc')
+
                 
                     <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>
+                    <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
 
                 @endif
+
 
                 
             </div>
@@ -92,13 +103,31 @@
                 </span>
         
             </div>
+
+            @if($path === 'index' || $path === 'suporte')
+
+            <div class="icones">
+
+                <a href="suporte.html" >
+                    <img class="suportIcon" src="/assets/icons/support_508190.png" alt="">
+                    <span>Suporte </span>
+                </a>
         
+                <a class="brigada" href="tel:7264">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <span>Brigada de incêndio</span> 
+                </a>
+    
+            </div>
+            
+            @else
             <div class="atalhos">
         
         
                 <img src="/imagens/ATALHOS MICROSIP (1).png">
         
             </div>
+            @endif
         
             
 

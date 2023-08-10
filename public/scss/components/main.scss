@@ -4,6 +4,8 @@
 main{
 
     padding: 20px 0;
+    min-height: 623px;
+
 
     .ramal{
 
@@ -170,7 +172,7 @@ main.chiaperini{
 
 main.techto{
 
-    background-color: $vermelhoTechto;
+    //background-color: $vermelhoTechto;
 
     .ramal{
 
@@ -179,7 +181,7 @@ main.techto{
 
             .cabecalho{
 
-                color: $amareloPrincipal;
+                color: $vermelhoPrincipal;
             }
 
 
@@ -252,7 +254,7 @@ main.mercadao-lojista{
 
             .cabecalho{
 
-                color: $amareloPrincipal;
+                color: $vermelhoPrincipal;
             }
 
 
@@ -309,6 +311,79 @@ main.mercadao-lojista{
         
             .table-hover tbody tr:hover td {
                 background-color: $amareloClaro;
+            }
+        }
+    }
+}
+
+main.techtopel{
+
+    background-color: $cinza;
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $azulPrincipal;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $azulPrincipal;              
+                            color: $branco;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $azulPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $azulPrincipal;
+                                    border: 1px solid $azulPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $azulClaro;
             }
         }
     }

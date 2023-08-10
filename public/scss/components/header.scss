@@ -39,6 +39,28 @@ header{
         justify-content: center;
         gap: 20px;
 
+        .home{
+            
+           
+            display: flex;
+            align-items: center;
+            align-self: center;
+            width: 100%;
+            max-width: 200px;
+            justify-content: center;
+            font-weight: bold;
+            font-size: $fs_16;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+            &:hover{
+
+                transform: scale(1.05);
+            }
+        }
+
+
         .brigada{
             
            
@@ -110,6 +132,19 @@ header.chiaperini{
 
     .linksEmergencia{
 
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
         .brigada{
             
             background-color: $vermelhoPrincipal;
@@ -166,6 +201,20 @@ header.chiaperini-pro{
 
     .linksEmergencia{
 
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
         .brigada{
             
             background-color: $vermelhoPrincipal;
@@ -199,7 +248,7 @@ header.chiaperini-pro{
 
 header.techto{
 
-    background-color: $vermelhoTechto;
+    background-color: $vermelhoPrincipal;
 
     .nav{
 
@@ -222,13 +271,24 @@ header.techto{
 
     .linksEmergencia{
 
+        .home{
+
+            background-color: $branco ;
+            color: $vermelhoPrincipal;
+
+            &:hover{
+
+                background-color: $amareloPrincipal ;
+
+            }
+
+        }
+
         .brigada{
             
             background-color: $amareloPrincipal;
             color: $vermelhoTechto;
            
-
-    
         }
 
         .portaria{
@@ -273,11 +333,19 @@ header.mercadao-lojista{
     }
 
     .linksEmergencia{
+        
+        .home{
+
+            background-color: $vermelhoPrincipal ;
+            color: $amareloPrincipal;
+
+        }
+        
 
         .brigada{
             
-            background-color: $amareloPrincipal;
-            color: $vermelhoTechto;
+            background-color: $vermelhoTechto;
+            color: $amareloPrincipal;
            
 
     
@@ -285,18 +353,157 @@ header.mercadao-lojista{
 
         .portaria{
         
+            background-color: $vermelhoTechto;
+            color: $amareloPrincipal;
+                  
+     
+        
+        }
+    }
+}
+
+header.fnc{
+
+    background-color: $azulPrincipal;
+
+    .nav{
+
+        .nav-link{
+                
+            color: $branco;
+            font-weight: bold;
+            border:1px solid $branco;
+
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+                border-radius: 5px;
+
+            }
+        }
+
+    }
+
+    .linksEmergencia{
+
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
+        .brigada{
+            
+            background-color: $vermelhoPrincipal;
+            color: $branco;
+           
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+
+        .portaria{
+        
            
             background-color: $branco;
-            color: $vermelhoTechto;
+            color: $azulPrincipal;
          
             
     
             &:hover{
     
-                background-color: $amareloPrincipal;
-                color: $vermelhoTechto;
+                background-color: $azulPrincipal;
+                color: $branco ;
+                border: 1px $branco solid;
             }   
         
         }
     }
+}
+
+header.techtopel{
+
+    background-color: $azulPrincipal;
+
+    .nav{
+
+        .nav-link{
+                
+            color: $branco;
+            font-weight: bold;
+            border:1px solid $branco;
+
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+                border-radius: 5px;
+
+            }
+        }
+
+    }
+
+    .linksEmergencia{
+
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
+        .brigada{
+            
+            background-color: $vermelhoPrincipal;
+            color: $branco;
+           
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+
+        .portaria{
+        
+           
+            background-color: $branco;
+            color: $azulPrincipal;
+         
+            
+    
+            &:hover{
+    
+                background-color: $azulPrincipal;
+                color: $branco ;
+                border: 1px $branco solid;
+            }   
+        
+        }
+    }
+}
+
+
+header.index{
+
+    display: none !important;
 }

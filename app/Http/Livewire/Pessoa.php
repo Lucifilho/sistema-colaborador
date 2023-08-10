@@ -19,55 +19,94 @@ class Pessoa extends Component
 
         $path= Request::path();
 
-        
         if ( $search ){
 
-            $unidades = Unidade::all();
+            $previousUrl = url()->previous();
 
-            foreach ($unidades as $unidade){
+            $path = explode('/', $previousUrl);
 
-                $nomeUnidade = $unidade-> nomeUnidade;
+
+            if($path[3] === 'geral'){
+
+
+
+                $pessoas = Pessoas::where(  function ($query) use( $search){
+                    $query->where('Nome', 'like', '%' .  $this->search . '%' )
+                        ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
+                        ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
+                        ->orWhere('Unidade', 'like', '%' . $this->search .'%' )
+                        ->orWhere('Ramal', 'like', '%' .  $this->search . '%');
+                        
+                })
+                ->orderBy('Departamento')
+                ->orderBy('Nome')
+                ->paginate(10);
+
+            
+            }else {
+                
+                if ($path[3] === 'chiaperini-pro') {
+            
+                    $path = 'Chiaperini pro';
+    
+                }
+    
+                elseif($path[3] === 'chiaperini-pro'){
+    
+                    $path = 'chiaperini';
+                }else{
+    
+                    $path = $path[3];
+                } 
+
+
+                $pessoas = Pessoas::where('Unidade', $path )->where(  function ($query) use( $search){
+                    $query->where('Nome', 'like', '%' .  $this->search . '%' )
+                        ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
+                        ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
+                        ->orWhere('Ramal', 'like', '%' .  $this->search . '%');
+                        
+                })
+                ->orderBy('Departamento')
+                ->orderBy('Nome')
+                ->paginate(10);
 
             }
 
-            if($path == 'chiaperini-pro'){
-
-                $path = 'chiaperini';
-            }else{
-
-                $path = 'Techto';
-            } 
-
-
-            $pessoas = Pessoas::where('Unidade', $path )->where(  function ($query) use( $search){
-                $query->where('Nome', 'like', '%' .  $this->search . '%' )
-                    ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
-                    ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
-                    ->orWhere('Ramal', 'like', '%' .  $this->search . '%');
-                    
-            })
-            ->orderBy('Departamento')
-            ->orderBy('Nome')
-            ->paginate(10);
         
         }else{
+            
+            if ($path === 'geral') {
 
-            if($path == 'chiaperini-pro'){
-
-                $path = 'chiaperini pro';
                 
-            }elseif($path == 'mercadao-lojista'){
+                $pessoas = Pessoas::orderBy('Unidade')
+                ->orderBy('Nome')  
+                ->orderBy('Departamento') 
+                ->paginate(10);
 
-                $path = 'mercadão lojista';
+                
             }else{
 
-                $path = $path;
-            } 
+                if($path == 'chiaperini-pro'){
 
-            $pessoas = Pessoas::where('Unidade',$path)
-            ->orderBy('Departamento')
-            ->orderBy('Nome')
-            ->paginate(10);
+                    $path = 'chiaperini pro';
+                    
+                }elseif($path == 'mercadao-lojista'){
+    
+                    $path = 'mercadão lojista';
+                }else{
+    
+                    $path = $path;
+                } 
+    
+                $pessoas = Pessoas::where('Unidade',$path)
+                ->orderBy('Departamento')
+                ->orderBy('Nome')
+                ->paginate(10);
+
+            }
+
+            
 
         }
 

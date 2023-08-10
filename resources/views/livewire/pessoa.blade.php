@@ -8,10 +8,10 @@
 
     <div class="pesquisa">
         
-        <input wire:model="search" type="text" class="form-control" placeholder="Digite aqui, Nome, Ramal, Departamento, ou Unidade do colaborador"/>
+        <input wire:model="search" wire:ignore type="text" class="form-control" placeholder="Digite aqui, Nome, Ramal, Departamento, ou Unidade do colaborador"/>
        
         @if ($search)
-            <span class="msg">Buscando por: {{$search}}</span>            
+            <span class="searchResults">Buscando por: {{$search}}</span>            
         @endif
     </div>
 
@@ -53,11 +53,11 @@
 
     @if(count($pessoas)==0 && $search)
 
-            <span class="msg">Nenhum resultado encontrado com {{$search}}</span>
+            <span class="searchResults">Nenhum resultado encontrado com {{$search}}</span>
 
         @elseif(count($pessoas)==0)
 
-            <span class="msg">Nenhum resultado registrado ainda</span>
+            <span class="searchResults">Nenhum resultado registrado ainda</span>
 
         @endif
       

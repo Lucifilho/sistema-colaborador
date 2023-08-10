@@ -10,6 +10,70 @@ footer{
     gap: 20px;
     padding: 10px 0;
 
+    
+    .icones{
+
+        display: flex;
+        gap: 50px;
+    
+
+        a{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $cinza;
+            padding: 15px;
+            border-radius: 50%;
+            width: 100%;
+            max-width: 110px;
+            justify-content: space-evenly;
+            text-decoration: none;
+        
+
+            &:hover{
+
+                background-color: $cinzaHover;
+                transform: scale(1.08) !important;
+            }
+
+            span{
+
+                color: $azulPrincipal;
+
+            }
+
+            .suportIcon{
+
+                width: 30px;
+            }
+        }
+
+        .brigada{
+
+            gap: 5px;
+            background-color: $vermelhoPrincipal;
+
+            i{
+
+                color: $branco;
+                font-size: 30px;
+            }
+
+            span{
+
+                color: $branco;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+    }
+
     .help{
         
         display: flex;
@@ -67,7 +131,7 @@ footer.chiaperini{
 
 footer.techto{
 
-    background-color: $vermelhoTechto;
+    background-color: $vermelhoPrincipal;
 
     .help{
         
@@ -97,4 +161,15 @@ footer.mercadao-lojista{
     }
 
 
+}
+
+footer.index{
+    
+    background-color: transparent;
+    display: none ;
+
+    .help{
+        
+        color: $preto;
+    }
 }

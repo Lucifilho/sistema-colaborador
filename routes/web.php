@@ -22,6 +22,7 @@ Route::get('/techto', [EventController::class,'ramaisPage']);
 
 Route::get('/techtopel', [EventController::class,'ramaisPage']);
 
+Route::get('/geral', [EventController::class,'ramaisPage']);
 
 Route::get('/chiaperini-pro', [EventController::class,'ramaisPage']);
 

@@ -13,8 +13,6 @@ use URL;
 
 
 
-
-
 class EventController extends Controller
 
 {
@@ -22,7 +20,15 @@ class EventController extends Controller
 
     public function home (){
 
-        $path= Requests::path();
+        $path = Request::path();
+
+        if ($path=="/" ) {
+            
+            $path = "index";
+        }else{
+            
+            $path = "";
+        }
 
         $pessoas = Pessoa::paginate(15);
 
@@ -32,9 +38,9 @@ class EventController extends Controller
 
     public function colaboradorPage ($id){
 
+        $path= '';
 
         $pessoa = Pessoa::findOrFail($id);
-
 
         return view('pages.colaboradorPage' , ['pessoa' => $pessoa]);
 
@@ -43,6 +49,7 @@ class EventController extends Controller
 
     public function editarColaboradorPage ($id){
 
+        $path= '';
 
         $pessoa = Pessoa::findOrFail($id);
 
@@ -69,15 +76,18 @@ class EventController extends Controller
 
     public function novoColaboradorPage (){
 
+        $path= '';
+
         $departamentos = Departamento::all();
 
         $unidades = Unidade::all();
     
-        return view('pages.novoColaborador',['departamentos'=> $departamentos,'unidades' => $unidades] );
+        return view('pages.novoColaborador',['departamentos'=> $departamentos,'unidades' => $unidades, 'path'=>$path] );
 
     }
 
     public function novoColaborador(Requests $request){
+
 
         $pessoa = new Pessoa();
 

@@ -1,0 +1,118 @@
+@import "../variaveis.scss";
+
+
+main {
+    
+    .bladeRamal{
+
+.pesquisa{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    height: 100px;
+
+
+    .searchResults{
+
+        font-weight: 700;
+        font-size: $fs_20;
+        
+    }
+}
+
+.searchResults{
+
+    font-weight: 700;
+    font-size: $fs_20;
+    
+}
+
+
+
+}
+}
+
+main.chiaperini {
+
+        .bladeRamal{
+    
+    .pesquisa{
+
+
+
+        .searchResults{
+
+            color: $branco;
+          
+        }
+    }
+
+    .searchResults{
+
+        color: $branco;
+        
+        
+    }
+
+    
+    
+    }
+}
+
+
+
+main.chiaperini-pro {
+
+    .bladeRamal{
+
+.pesquisa{
+
+
+
+    .searchResults{
+
+        color: $preto;
+      
+    }
+}
+
+.searchResults{
+
+    color: $preto;
+    
+    
+}
+
+
+
+}
+}
+
+main.techto {
+
+    .bladeRamal{
+
+.pesquisa{
+
+
+
+    .searchResults{
+
+        color: $vermelhoTechto;
+      
+    }
+}
+
+.searchResults{
+
+    color: $vermelhoTechto;
+    
+    
+}
+
+
+
+}
+}
