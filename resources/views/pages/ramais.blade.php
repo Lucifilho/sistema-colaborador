@@ -3,7 +3,6 @@
 
 <div class="ramal">
 
-
     
     <livewire:pessoa /> 
 

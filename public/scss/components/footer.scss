@@ -110,6 +110,19 @@ footer{
         font-weight: 600;
         color: $branco;
     }
+
+    .version{
+
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+
+        .number{
+
+            color: rgba($color: #ffffff, $alpha: 0.3);
+            font-weight: 900;
+        }
+    }
 }
 
 

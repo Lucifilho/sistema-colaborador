@@ -30,6 +30,7 @@
                 <li> <a class="link"  href="techto">Techto Brasil</a> </li> 
                 <li> <a class="link"  href="mercadaolojista">Mercadão Lojista</a> </li> 
                 <li> <a class="link"  href="chiaperinipro">Chiaperini PRO</a> </li> 
+                <li> <a class="link"  href="techtopel">TechtoPel</a> </li> 
                 <li> <a class="link"  href="fnc">Fundição Natividade (FNC)</a> </li>
 
             </ul>

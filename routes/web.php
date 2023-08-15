@@ -18,6 +18,8 @@ Route::get('/', [EventController::class,'home']);
 
 Route::get('/chiaperini', [EventController::class,'ramaisPage']);
 
+Route::get('/dashboard', [EventController::class,'dashboard']);
+
 Route::get('/techto', [EventController::class,'ramaisPage']);
 
 Route::get('/techtopel', [EventController::class,'ramaisPage']);
@@ -49,15 +51,3 @@ Route::put('/colaborador/{id}', [EventController::class,'editarColaborador']);
 
 Route::delete('excluir-colaborador/{id}', [EventController::class,'excluirColaborador']);
 
-
-
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});

@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pessoa;
+use App\Models\User;
 use App\Models\Departamento;
 use App\Models\Unidade;
 use Illuminate\Http\Request as Requests;
 use Request;
+use Carbon\Carbon;
 use DB;
+use Auth;
 use URL;
 
 
@@ -17,8 +20,55 @@ class EventController extends Controller
 
 {
 
+    public function lastUpdatade(){
+
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
+
+
+
+        return view('layouts.main' , ['pessoas' => $pessoas, 'lastDate' => $lastDate]);
+    }
+
+    public function dashboard (){
+
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
+
+        $path = Request::path();
+        
+        return view('pages.dashboard' , ['path'=> $path,'lastDate' => $lastDate,'userLogged'=> $userLogged ]);
+    }
 
     public function home (){
+
+        
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
 
         $path = Request::path();
 
@@ -30,26 +80,83 @@ class EventController extends Controller
             $path = "";
         }
 
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
+
+
         $pessoas = Pessoa::paginate(15);
 
-        return view('pages.home' , ['pessoas' => $pessoas,'path'=> $path]);
+        return view('pages.home' , ['pessoas' => $pessoas,'userLogged'=> $userLogged, 'path'=> $path, 'lastDate' => $lastDate]);
 
     }
 
     public function colaboradorPage ($id){
 
-        $path= '';
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+
+        $path= Request::path();
+
+        $path = explode("/", $path);
+
+        $path = $path[0];
+
+        if($path === 'colaborador'){
+
+            $path = 'colaboradorPage';
+        }else{
+            
+        }
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
 
         $pessoa = Pessoa::findOrFail($id);
 
-        return view('pages.colaboradorPage' , ['pessoa' => $pessoa]);
+        return view('pages.colaboradorPage' , ['pessoa' => $pessoa,'userLogged'=> $userLogged, 'path'=> $path, 'lastDate'=> $lastDate]);
 
     }
 
-
     public function editarColaboradorPage ($id){
 
-        $path= '';
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+
+        $path= Request::path();
+
+        $path = explode("/", $path);
+
+        $path = $path[0];
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
 
         $pessoa = Pessoa::findOrFail($id);
 
@@ -57,12 +164,12 @@ class EventController extends Controller
 
         $unidades = Unidade::all();
 
-        return view('pages.editarColaboradorPage' , ['pessoa' => $pessoa,'departamentos'=> $departamentos,'unidades' => $unidades]);
+        return view('pages.editarColaboradorPage' , ['pessoa' => $pessoa,'userLogged'=> $userLogged, 'departamentos'=> $departamentos,'path'=> $path, 'unidades' => $unidades,'lastDate' => $lastDate ]);
 
     }
 
+    public function editarColaborador (Requests $request){
 
-    public function editarColaborador (Request $request){
 
 
         $data = $request -> all();
@@ -76,13 +183,28 @@ class EventController extends Controller
 
     public function novoColaboradorPage (){
 
-        $path= '';
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
+        $path= Request::path();
 
         $departamentos = Departamento::all();
 
         $unidades = Unidade::all();
     
-        return view('pages.novoColaborador',['departamentos'=> $departamentos,'unidades' => $unidades, 'path'=>$path] );
+        return view('pages.novoColaborador',['departamentos'=> $departamentos, 'userLogged'=> $userLogged, 'unidades' => $unidades, 'path'=>$path, 'lastDate'=> $lastDate] );
 
     }
 
@@ -101,7 +223,7 @@ class EventController extends Controller
 
         $pessoa -> save();
 
-        return redirect('/registrar-colaborador')-> with('msg','Colaborador cadastrado(a) com sucesso');
+        return redirect('/geral')-> with('msg','Colaborador cadastrado(a) com sucesso');
     }
 
     public function excluirColaborador($id){
@@ -118,6 +240,21 @@ class EventController extends Controller
 
     public function ramaisPage (){
 
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+        
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
         $path= Request::path();
 
         $search = "ola";
@@ -130,7 +267,11 @@ class EventController extends Controller
 
         return view('pages.ramais' , [
             'pessoas' => $pessoas, 'search'=> $search, 
-            'path' => $path ]);
+            'path' => $path,
+            'lastDate' => $lastDate,
+            'userLogged' => $userLogged
+        
+        ]);
         
             
        

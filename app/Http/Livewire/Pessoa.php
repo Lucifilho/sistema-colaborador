@@ -19,7 +19,7 @@ class Pessoa extends Component
 
         $path= Request::path();
 
-        if ( $search ){
+        if ( $search && $search =! '' ){
 
             $previousUrl = url()->previous();
 

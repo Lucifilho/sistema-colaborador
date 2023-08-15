@@ -1,0 +1,70 @@
+@import "../variaveis.scss";
+
+.dashboardPage{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+
+
+    .cabecalho{
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+
+        h1{
+
+            font-size: $fs_40;
+            font-weight: 700;
+        }
+    }
+
+    .menuOptions{
+
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 5px;
+        border: 1px solid $cinza;
+        -webkit-box-shadow: 5px 5px 10px 5px $cinza;
+        -moz-box-shadow: 5px 5px 10px 5px $cinza;
+        box-shadow: 5px 5px 10px 5px $cinza;
+
+        .option{
+
+            width: 100%;
+            max-width: 100%;
+            align-self: center;
+            border-radius: 5px;
+
+
+            a{
+
+                display: flex;
+                padding: 10px;
+                width: 100%;
+                max-width: 100%;
+                justify-content: center;
+                font-weight: bold;
+                font-size: $fs_20;
+                color: $azulPrincipal;
+
+                &:hover{
+
+                    background-color:$azulPrincipal;
+                    color: $branco;
+                }
+
+            }
+        }
+
+    }
+
+}

@@ -9,7 +9,169 @@ header{
     align-items: center;
     padding: 18px 0;
     gap: 10px;
+    min-height: 70px;
 
+    .dashCall{
+
+        display: flex;
+        gap: 20px;
+        color: $branco;
+        align-items: center;
+        width: 90%;
+        justify-content: flex-end;
+
+        h1{
+
+            font-size: $fs_40;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        
+        .menuBox{
+
+            height: 20px;
+
+
+            i{
+
+                font-size: $fs_20;
+            }
+
+            #menuDrop{
+
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                background-color: $azulPrincipal ;
+                top: 70px;
+                padding: 20px 0 !important;
+                right: 90px;
+                gap: 10px;
+                width: 12%;
+
+                .menu-item{
+
+                    text-align: end;
+                    padding: 5px 15px;
+                    width: 100%;
+
+
+                    a{
+                        
+                        display: flex;
+                        width: 100%;
+                        padding: 5px;
+                        color: $branco;
+                        font-size: $fs_20;
+                        border-bottom: 1px solid $branco;
+                        
+                        &:hover{
+
+                            background-color: $branco;
+                            color: $azulPrincipal;
+                        }
+                    }                
+                }
+            }
+        }
+    }
+
+    #columnMenu{
+        
+        position: absolute;
+        display: none  ;
+        flex-direction: column;
+        background-color: $azulPrincipal;
+        padding: 20px;
+        gap: 20px !important;
+        margin: 10px 10px;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        max-width: 18%;
+
+        .nav-link-menu{
+            
+            font-weight: bold;
+            border-radius: 2px;
+            width: 180px;
+            width: 100%;
+            border-bottom: 2px solid $branco;
+            color: $branco;
+            padding: 5px;
+            
+            &:hover{
+
+                border-bottom: none;
+                color: $azulPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
+
+   
+    #menuBarra{
+
+            position: absolute;
+            left: 0;
+            padding: 30px 60px;
+            z-index: 10;
+
+            #barraMenu{
+
+                display: flex;
+
+            }
+
+            #menuClose{
+
+                display: none;
+            }
+
+        i{
+            color: $branco;
+            font-size: $fs_40;
+        }
+    }
+
+    .columnMenu{
+        
+        position: absolute;
+        display: none !important;
+        flex-direction: column;
+        background-color: $azulPrincipal;
+        padding: 20px;
+        gap: 20px !important;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        max-width: 20%;
+
+     
+        
+        .nav-link-menu{
+            
+            font-weight: bold;
+            border-radius: 2px;
+            width: 180px;
+            width: 100%;
+            border-bottom: 2px solid $branco;
+            color: $branco;
+            padding: 5px;
+            
+            &:hover{
+
+                border-bottom: none;
+                color: $azulPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
+
+    
     .nav{
         
         display: flex ;
@@ -111,6 +273,27 @@ header.chiaperini{
 
     background-color: $azulPrincipal;
 
+    #columnMenu{
+        
+        background-color: $azulPrincipal;
+        border: 1px solid $branco;
+        
+
+        .nav-link-menu{
+            
+            border-bottom: 2px solid $branco;
+            color: $branco;
+            
+            
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
+
     .nav{
 
         .nav-link{
@@ -176,9 +359,30 @@ header.chiaperini{
     }
 }
 
-header.chiaperini-pro{
+header.chiaperini-pro, header.editar-colaborador,header.colaboradorPage,header.registrar-colaborador{
 
     background-color: $azulPrincipal;
+
+    #columnMenu{
+        
+        background-color: $azulPrincipal;
+        border: 1px solid $azulPrincipal;
+        
+
+        .nav-link-menu{
+            
+            border-bottom: 2px solid $branco;
+            color: $branco;
+            
+            
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
 
     .nav{
 
@@ -250,6 +454,26 @@ header.techto{
 
     background-color: $vermelhoPrincipal;
 
+    #columnMenu{
+        
+        background-color: $vermelhoPrincipal;
+        border: none;
+        
+
+        .nav-link-menu{
+            
+            color: $branco;
+            
+            
+            &:hover{
+
+                color: $vermelhoPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
+
     .nav{
 
         .nav-link{
@@ -312,6 +536,34 @@ header.techto{
 header.mercadao-lojista{
 
     background-color: $amareloMercadao;
+
+    #columnMenu{
+        
+        background-color: $vermelhoPrincipal;
+        border: none;
+        
+
+        .nav-link-menu{
+            
+            color: $branco;
+            
+            
+            &:hover{
+
+                color: $vermelhoPrincipal;
+                background-color: $branco;
+            }
+        }
+        
+    }
+
+    #menuBarra{
+
+    i{
+        color: $vermelhoPrincipal;
+        font-size: $fs_40;
+    }
+}
 
     .nav{
 
@@ -432,9 +684,151 @@ header.fnc{
     }
 }
 
+header.dashboard{
+
+    background-color: $azulPrincipal;
+
+    .nav{
+
+        .nav-link{
+                
+            color: $branco;
+            font-weight: bold;
+            border:1px solid $branco;
+
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+                border-radius: 5px;
+
+            }
+        }
+
+    }
+
+    .linksEmergencia{
+
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
+        .brigada{
+            
+            background-color: $vermelhoPrincipal;
+            color: $branco;
+           
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+
+        .portaria{
+        
+           
+            background-color: $branco;
+            color: $azulPrincipal;
+         
+            
+    
+            &:hover{
+    
+                background-color: $azulPrincipal;
+                color: $branco ;
+                border: 1px $branco solid;
+            }   
+        
+        }
+    }
+}
+
+
 header.techtopel{
 
     background-color: $azulPrincipal;
+
+    .nav{
+
+        .nav-link{
+                
+            color: $branco;
+            font-weight: bold;
+            border:1px solid $branco;
+
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+                border-radius: 5px;
+
+            }
+        }
+
+    }
+
+    .linksEmergencia{
+
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
+        .brigada{
+            
+            background-color: $vermelhoPrincipal;
+            color: $branco;
+           
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+
+        .portaria{
+        
+           
+            background-color: $branco;
+            color: $azulPrincipal;
+         
+            
+    
+            &:hover{
+    
+                background-color: $azulPrincipal;
+                color: $branco ;
+                border: 1px $branco solid;
+            }   
+        
+        }
+    }
+}
+header.geral{
+
+    background-color: $azulPrincipal;
+
+   
 
     .nav{
 

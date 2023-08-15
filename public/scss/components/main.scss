@@ -388,3 +388,78 @@ main.techtopel{
         }
     }
 }
+
+
+
+main.geral{
+
+    background-color: $branco;
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $azulPrincipal;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $azulPrincipal;              
+                            color: $branco;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $azulPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $azulPrincipal;
+                                    border: 1px solid $azulPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $azulClaro;
+            }
+        }
+    }
+}
