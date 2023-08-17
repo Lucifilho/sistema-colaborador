@@ -84,7 +84,7 @@ footer{
         padding: 0 10px;
         max-width: 1200px;
         font-weight: 600 !important;
-        font-size: $fs_18 !important;
+        font-size: $fs18 !important;
     }
 
     .atalhos {
@@ -113,10 +113,7 @@ footer{
 
     .version{
 
-        position: absolute;
-        bottom: 0px;
-        right: 20px;
-
+      
         .number{
 
             color: rgba($color: #ffffff, $alpha: 0.3);
@@ -185,4 +182,9 @@ footer.index{
         
         color: $preto;
     }
+}
+
+footer.login{
+
+    display: none !important;
 }

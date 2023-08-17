@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
-            $table->string('Ramal')->nullable()->default(NULL);
+            $table->string('Ramal')->nullable()->unique();
             $table->string('Nome')->nullable()->default(NULL);
             $table->string('Whatsapp')->nullable()->default(NULL);
             $table->string('Departamento')->nullable()->default(NULL);

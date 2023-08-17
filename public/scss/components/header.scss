@@ -22,7 +22,7 @@ header{
 
         h1{
 
-            font-size: $fs_40;
+            font-size: $fs40;
             font-weight: 700;
             margin: 0;
         }
@@ -35,7 +35,7 @@ header{
 
             i{
 
-                font-size: $fs_20;
+                font-size: $fs20;
             }
 
             #menuDrop{
@@ -63,7 +63,7 @@ header{
                         width: 100%;
                         padding: 5px;
                         color: $branco;
-                        font-size: $fs_20;
+                        font-size: $fs20;
                         border-bottom: 1px solid $branco;
                         
                         &:hover{
@@ -132,7 +132,7 @@ header{
 
         i{
             color: $branco;
-            font-size: $fs_40;
+            font-size: $fs40;
         }
     }
 
@@ -211,7 +211,7 @@ header{
             max-width: 200px;
             justify-content: center;
             font-weight: bold;
-            font-size: $fs_16;
+            font-size: $fs16;
             gap: 5px;
             padding: 5px 10px;
             border-radius: 5px;
@@ -233,7 +233,7 @@ header{
             max-width: 200px;
             justify-content: space-between;
             font-weight: bold;
-            font-size: $fs_16;
+            font-size: $fs16;
             gap: 5px;
             padding: 5px 10px;
             border-radius: 5px;
@@ -561,7 +561,7 @@ header.mercadao-lojista{
 
     i{
         color: $vermelhoPrincipal;
-        font-size: $fs_40;
+        font-size: $fs40;
     }
 }
 
@@ -898,6 +898,11 @@ header.geral{
 
 
 header.index{
+
+    display: none !important;
+}
+
+header.login{
 
     display: none !important;
 }

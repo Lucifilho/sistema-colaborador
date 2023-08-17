@@ -31,8 +31,20 @@
 
             .campo{
 
-                font-size: $fs_20;
+                font-size: $fs20;
                 font-weight: 700;
+                display: flex !important;
+                align-items: baseline;
+
+                p{
+
+                    font-size: $fs10;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    height: 15px;
+                    padding: 0 5px;
+                }
 
             }
 
@@ -65,7 +77,7 @@
                 width: 100px;
                 text-align: center;
                 padding: 5px;
-                font-size: $fs_20;
+                font-size: $fs20;
 
             }
         }

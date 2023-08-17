@@ -41,6 +41,7 @@
             <nav id="columnMenu">
 
                 <a class="@auth nav-link-menu @elseguest nav-link @endAuth" href="/">Home</a>
+                <a class="@auth nav-link-menu @elseguest nav-link @endAuth" href="/geral">Geral</a>
                 <a class="@auth nav-link-menu @elseguest nav-link @endAuth" href="/chiaperini">Chiaperini</a>
                 <a class="@auth nav-link-menu @elseguest nav-link @endAuth" href="/chiaperini-pro">Chiaperini Pro</a>
                 <a class="@auth nav-link-menu @elseguest nav-link @endAuth" href="/fnc">FNC</a>
@@ -207,7 +208,7 @@
         
             <div class="version">
 
-                <span class="number">V 1.0.0</span>
+                <span class="number">V 1.3.3</span>
 
             </div>
             

@@ -29,7 +29,7 @@
                 <th class="lastTh">Ligar via Microsip</th>
             </tr>
         </thead>
-    
+        <a href="tel:7313">a</a>
         <tbody><!-- Aqui você pode adicionar as linhas da tabela. -->
     
             @foreach($pessoas as $pessoa)    
@@ -42,7 +42,11 @@
                     @endguest
                 
                 
-                </td><td>{{$pessoa -> Whatsapp}}</td><td>{{$pessoa -> Departamento}}</td><td>{{$pessoa -> Unidade}}</td><td><a class="btnLigar" href="tel:{{$pessoa -> ramal}}">Ligar</a></td></tr>
+                </td>
+                <td>{{$pessoa -> Whatsapp}}</td>
+                <td>{{$pessoa -> Departamento}}</td>
+                <td>{{$pessoa -> Unidade}}</td>
+                <td><a class="btnLigar" href="tel:{{$pessoa -> ramal}}">Ligar</a></td></tr>
             @endforeach
         
         

@@ -38,6 +38,29 @@ class EventController extends Controller
         return view('layouts.main' , ['pessoas' => $pessoas, 'lastDate' => $lastDate]);
     }
 
+    public function login (){
+
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+
+        if ($lastDateRecord) {
+
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+
+        } else {
+            
+        }
+
+        $path = Request::path();
+        
+        return view('auth.login' , ['path'=> $path,'lastDate' => $lastDate,'userLogged'=> $userLogged ]);
+    }
+
     public function dashboard (){
 
         if (Auth::check()) {
@@ -87,6 +110,8 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
+
+            $lastDate = '';
             
         }
 
@@ -211,10 +236,18 @@ class EventController extends Controller
     public function novoColaborador(Requests $request){
 
 
+        $ramal = $request->Ramal;
+
+        $existingRecord = Pessoa::where('Ramal', $ramal)->first();
+
+        if ($existingRecord) {
+            return redirect()->back()->with('msg', 'Já existe um(a) colaborar(a) com este ramal.');
+        }
+
         $pessoa = new Pessoa();
 
-        $pessoa -> Ramal = $request -> Ramal;
         $pessoa -> Nome = $request -> Nome;
+        $pessoa -> Ramal = $request -> Ramal;
         $pessoa -> Whatsapp = $request -> Whatsapp;
         $pessoa -> Departamento = $request -> Departamento;
         $pessoa -> Unidade = $request -> Unidade;
@@ -261,9 +294,9 @@ class EventController extends Controller
 
         $pessoas = Pessoa::paginate(15);
         
-        $all = Pessoa::all();
+        $all = Pessoa::all()->toArray();
 
-    
+        
 
         return view('pages.ramais' , [
             'pessoas' => $pessoas, 'search'=> $search, 
@@ -276,4 +309,6 @@ class EventController extends Controller
             
        
     }
+
+
 }

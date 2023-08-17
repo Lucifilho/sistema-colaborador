@@ -389,8 +389,6 @@ main.techtopel{
     }
 }
 
-
-
 main.geral{
 
     background-color: $branco;
@@ -462,4 +460,11 @@ main.geral{
             }
         }
     }
+}
+
+main.login{
+
+    min-height: 954px;
+    height: 100%;
+    align-items: center;
 }

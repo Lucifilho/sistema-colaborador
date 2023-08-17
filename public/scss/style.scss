@@ -1,5 +1,5 @@
 @import "pages/chiaperini","pages/colaboradorPage", "variaveis","pages/editColaborador","pages/novoColaborador",
-"components/header", "components/footer","components/main","pages/index","pages/ramal","pages/dashboarad";
+"components/header", "components/footer","components/main","pages/index","pages/ramal","pages/dashboarad","pages/login","pages/register";
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk');
 
@@ -8,6 +8,29 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.areaAcesso{
+
+    position: absolute;
+    right: 70px;
+    top: 50px;
+
+    a{
+
+        color: $azulPrincipal;
+        font-size: $fs14;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $azulPrincipal;
+
+
+        &:hover{
+
+            color: $branco;
+            background-color: $azulPrincipal;
+        }
+    }
+
+}
 
 #msg{
 

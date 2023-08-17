@@ -7,16 +7,18 @@
 
             @csrf
 
+            
             <div class="group">
 
-                <label for="Ramal" class="campo">Ramal</label>
-                <input type="text" name="Ramal" class="valor">
+                <label for="Nome" class="campo">Nome do colaborador <p>(Obrigatório)</p></label>
+                <input type="text"  name="Nome" class="valor" required>
 
             </div>
+            
             <div class="group">
 
-                <label for="Nome" class="campo">Nome do colaborador</label>
-                <input type="text"  name="Nome" class="valor">
+                <label for="Ramal" class="campo">Ramal <p>(Obrigatório)</p></label>
+                <input type="text" name="Ramal" class="valor" required>
 
             </div>
 
@@ -29,9 +31,9 @@
 
             <div class="group">
 
-                <label for="Departamento" class="campo">Departamento</label>
+                <label for="Departamento" class="campo">Departamento <p>(Obrigatório)</p></label>
                
-                <select name="Departamento" class="valor">
+                <select name="Departamento" class="valor" required>
 
                     <option value="">Selecione</option>
 
@@ -53,8 +55,8 @@
 
             <div class="group">
 
-                <label for="Unidade" class="campo">Unidade</label>
-                <select class="valor" name="Unidade">
+                <label for="Unidade" class="campo">Unidade <p>(Obrigatório)</p></label>
+                <select class="valor" name="Unidade" required>
 
                     <option value="Selecione">Selecione</option>
                     @foreach($unidades as $unidade)

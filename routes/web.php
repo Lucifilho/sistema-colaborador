@@ -20,6 +20,8 @@ Route::get('/chiaperini', [EventController::class,'ramaisPage']);
 
 Route::get('/dashboard', [EventController::class,'dashboard']);
 
+Route::get('/login', [EventController::class,'login']);
+
 Route::get('/techto', [EventController::class,'ramaisPage']);
 
 Route::get('/techtopel', [EventController::class,'ramaisPage']);

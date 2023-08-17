@@ -1,8 +1,12 @@
 @extends('layouts.main')
 @section('content')
 
-
+<div class="areaAcesso">
+    <a href="/login">Area do administrador</a>
+</div>
 <div class="indexPage">
+
+        
 
         <div class="titulo">
 
