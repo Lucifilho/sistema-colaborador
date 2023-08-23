@@ -23,11 +23,20 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin'; // Replace 'role' with your actual attribute that defines admin status
+    }
+
+
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.

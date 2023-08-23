@@ -1,128 +1,148 @@
 @import "../variaveis.scss";
 
+.colaboradorPage{
 
-.colaborador{
+    .assinatura{
 
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    max-width: 1200px;
-
-    .dados{
-
+        display: none !important;
+    }
+    
+    .colaborador{
+    
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         width: 100%;
-        max-width: 420px !important;
-        align-items: center;
-        padding: 20px !important;
-        justify-content: space-between;
-        border: 1px solid $cinza;
-        -webkit-box-shadow: 5px 5px 10px 5px $cinza;
-        -moz-box-shadow: 5px 5px 10px 5px $cinza;
-        box-shadow: 5px 5px 10px 5px $cinza;
-
-        .group{
-
+        max-width: 1200px;
+    
+        .lista{
+    
+            -webkit-box-shadow: 5px 5px 10px 5px $cinza;
+            -moz-box-shadow: 5px 5px 10px 5px $cinza;
+            box-shadow: 5px 5px 10px 5px $cinza;
+            border: 1px solid $cinza;
+            padding: 25px;
             display: flex;
-            width: 100%;
-            max-width: 420px;
-            font-size: $fs18;
-            border-bottom: 1px solid $azulPrincipal;
-            min-height: 67px;
-            padding: 5px 0;
-            justify-content: space-evenly;
-
-            .labelCampo{
-
+            flex-direction: column;
+            gap: 20px;
+    
+    
+    
+            .dados{
+    
+                display: flex;
+                flex-wrap: wrap;
                 width: 100%;
-                max-width: 120px;
-                align-self: center;
-                font-weight: bold;
-
-            }
-
-            .valorCampo,a{
-
-                width: 100%;
-                max-width: 120px !important;
-                text-align: center;
-                align-self: center;
-
-            }
-
-            a{
-
-                background-color: $azulPrincipal;
-                color: $branco;
-                font-weight: bold;
-                width: 100%;
-                max-width: 150px;
-                padding: 5px 0;
-
-
-                &:hover{
-
-                    background-color: $branco;
-                    border: 2px solid $azulPrincipal;
-                    color: $azulPrincipal;
-                    transform: scale(1.05);
-
+                max-width: 100% !important;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+    
+               
+                .group{
+    
+                    display: flex;
+                    width: 100%;
+                    max-width: 420px;
+                    font-size: $fs18;
+                    border-bottom: 1px solid $azulPrincipal;
+                    min-height: 67px;
+                    padding: 5px 0;
+                    justify-content: space-evenly;
+    
+                    .labelCampo{
+    
+                        width: 100%;
+                        max-width: 120px;
+                        align-self: center;
+                        font-weight: bold;
+    
+                    }
+    
+                    .valorCampo,a{
+    
+                        width: 100%;
+                        max-width: 260px !important;
+                        text-align: center;
+                        align-self: center;
+    
+                    }
+    
+                    a{
+    
+                        background-color: $azulPrincipal;
+                        color: $branco;
+                        font-weight: bold;
+                        width: 100%;
+                        max-width: 150px;
+                        padding: 5px 0;
+    
+    
+                        &:hover{
+    
+                            background-color: $branco;
+                            border: 2px solid $azulPrincipal;
+                            color: $azulPrincipal;
+                            transform: scale(1.05);
+    
+                        }
+                    }
+    
+                  
+                    #ramalNum{
+    
+                        display: flex;
+                    }
+    
+                    #ramal{
+    
+                        display: none;
+                    }
+                }
+    
+                .action{
+    
+                    border-bottom: 1px solid $azulPrincipal;
+                    padding-bottom: 5px;
+                }
+    
+                .lastGroup{
+                    
+                    border-bottom: none ;
+                    justify-content: center;
+    
                 }
             }
-
+    
+           .actions{
+    
+            display: flex;
+            gap: 25px;
+            justify-content: space-evenly;
+    
             .btnSimples{
-
+                
+                width: 180px;
+                text-align: center;
                 background-color: $branco;
+                font-weight: 700;
                 color: $azulPrincipal;
+                padding: 8px 15px;
                 border: 2px solid $azulPrincipal;
-
-
+    
+    
                 &:hover{
-
+    
                     background-color: $azulPrincipal;
                     border: none;
                     color: $branco;
                     transform: scale(1.2);
-
+    
                 }
-
+    
             }
-
-            #ramalNum{
-
-                display: flex;
-            }
-
-            #ramal{
-
-                display: none;
-            }
+    
+           }
         }
-
-        .action{
-
-            border-bottom: 1px solid $azulPrincipal;
-            padding-bottom: 5px;
-        }
-
-        .lastGroup{
-            
-            border-bottom: none ;
-            justify-content: center;
-
-        }
+    
     }
-
-    .infoExtras{
-
-        display: flex;
-        flex-direction: column;
-        background-color: $cinza;
-        width: 100%;
-        max-width: 800px;
-        gap: 20px;
-        padding: 20px !important;
-    }
-
 }

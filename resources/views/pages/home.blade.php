@@ -1,9 +1,25 @@
 @extends('layouts.main')
 @section('content')
 
+<div class="areaColaborador">
+    <a href="/portal-colaborador">Area do colaborador</a>
+</div>
+
+@auth
+
+<div class="areaAcesso">
+    <a href="/dashboard">Area do administrador</a>
+</div>
+
+
+
+@elseguest
+
 <div class="areaAcesso">
     <a href="/login">Area do administrador</a>
 </div>
+
+@endguest
 <div class="indexPage">
 
         
@@ -32,8 +48,8 @@
                 <li> <a class="link"  href="geral">Geral</a> </li> 
                 <li> <a class="link"  href="chiaperini">Chiaperini Industrial</a> </li> 
                 <li> <a class="link"  href="techto">Techto Brasil</a> </li> 
-                <li> <a class="link"  href="mercadaolojista">Mercadão Lojista</a> </li> 
-                <li> <a class="link"  href="chiaperinipro">Chiaperini PRO</a> </li> 
+                <li> <a class="link"  href="mercadao-lojista">Mercadão Lojista</a> </li> 
+                <li> <a class="link"  href="chiaperini-pro">Chiaperini PRO</a> </li> 
                 <li> <a class="link"  href="techtopel">TechtoPel</a> </li> 
                 <li> <a class="link"  href="fnc">Fundição Natividade (FNC)</a> </li>
 

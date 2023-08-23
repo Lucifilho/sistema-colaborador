@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
             $table->string('Ramal')->nullable()->unique();
+            $table->string('Email')->nullable()->default(NULL);
             $table->string('Nome')->nullable()->default(NULL);
+            $table->string('Funcao')->nullable()->default(NULL);
             $table->string('Whatsapp')->nullable()->default(NULL);
             $table->string('Departamento')->nullable()->default(NULL);
             $table->string('Unidade')->nullable()->default(NULL);

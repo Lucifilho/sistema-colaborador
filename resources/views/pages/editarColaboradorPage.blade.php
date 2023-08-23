@@ -11,16 +11,21 @@
             <div class="group">
 
                 <label for="Ramal" class="campo">Ramal</label>
-                <input type="text" name="Ramal" value="{{$pessoa-> Ramal}}" class="valor">
+                <input type="text" name="Ramal" value="{{$pessoa-> Ramal}}" required class="valor">
 
             </div>
             <div class="group">
 
                 <label for="Nome" class="campo">Nome do colaborador</label>
-                <input type="text" name="Nome" value="{{$pessoa-> Nome}}" class="valor">
+                <input type="text" name="Nome" value="{{$pessoa-> Nome}}" required class="valor">
 
             </div>
+            <div class="group">
 
+                <label for="Funcao" class="campo">Função</label>
+                <input type="text" name="Funcao" value="{{$pessoa-> Funcao}}" required class="valor">
+
+            </div>
             <div class="group">
 
                 <label for="Whatsapp" class="campo">Whatsapp</label>
@@ -30,8 +35,15 @@
 
             <div class="group">
 
+                <label for="Email" class="campo">Email</label>
+                <input type="email" name="Email" value="{{$pessoa-> Email}}" class="valor">
+
+            </div>
+
+            <div class="group">
+
                 <label for="Departamento" class="campo">Departamento</label>
-                <select name="Departamento" class="valor">
+                <select name="Departamento" class="valor" required>
 
                     <option value="{{$pessoa -> Departamento}}">{{$pessoa -> Departamento}}</option>
 
@@ -54,7 +66,7 @@
             <div class="group">
 
                 <label for="Unidade" class="campo">Unidade</label>
-                <select name="Unidade" class="valor">
+                <select name="Unidade" class="valor" required>
 
                     <option value="{{$pessoa -> Unidade}}">{{$pessoa -> Unidade}}</option>
 

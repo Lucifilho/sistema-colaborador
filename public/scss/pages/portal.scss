@@ -1,0 +1,80 @@
+@import "../variaveis.scss";
+
+.portalColaborador{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .cabecalho{
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        h1{
+            
+            color: $azulPrincipal;
+            font-size: $fs45;
+            font-weight: 700;
+        }
+
+        span{
+
+            color: $azulPrincipal;
+            font-size: $fs18;
+            font-weight: 400;
+        }
+    }
+
+    .pesquisa{
+
+        display: flex;
+        align-items: center;
+
+        input{
+
+            border: none;
+            background-color: $cinza;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+        
+
+            &:focus-visible{
+
+                outline:none;
+            }
+        }
+
+        i{
+
+            padding: 14px;
+            background-color: $pretoOpaco;
+            color: $branco;
+        
+        }
+    }
+
+    .posts{
+
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;        
+
+        .post{
+
+            border: 1px solid $cinza;
+            box-shadow: 5px 2px 10px 1px $cinza;
+
+            .postTexts{
+
+                padding: 10px;
+            }
+        }
+    }
+}

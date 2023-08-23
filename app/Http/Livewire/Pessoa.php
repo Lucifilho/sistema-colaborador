@@ -28,8 +28,6 @@ class Pessoa extends Component
 
             if($path[3] === 'geral'){
 
-
-
                 $pessoas = Pessoas::where(  function ($query) use( $search){
                     $query->where('Nome', 'like', '%' .  $this->search . '%' )
                         ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
@@ -40,7 +38,7 @@ class Pessoa extends Component
                 })
                 ->orderBy('Departamento')
                 ->orderBy('Nome')
-                ->paginate(10);
+                ->paginate(5);
 
             
             }else {
@@ -69,7 +67,7 @@ class Pessoa extends Component
                 })
                 ->orderBy('Departamento')
                 ->orderBy('Nome')
-                ->paginate(10);
+                ->paginate(5);
 
             }
 
@@ -82,7 +80,7 @@ class Pessoa extends Component
                 $pessoas = Pessoas::orderBy('Unidade')
                 ->orderBy('Nome')  
                 ->orderBy('Departamento') 
-                ->paginate(10);
+                ->paginate(5);
 
                 
             }else{
@@ -102,7 +100,7 @@ class Pessoa extends Component
                 $pessoas = Pessoas::where('Unidade',$path)
                 ->orderBy('Departamento')
                 ->orderBy('Nome')
-                ->paginate(10);
+                ->paginate(5);
 
             }
 

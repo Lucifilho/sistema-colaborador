@@ -12,9 +12,11 @@ class Pessoa extends Model
     protected $fillable = [
 
         'Ramal',
+        'Email',
         'Nome',
         'Whatsapp',
         'Departamento',
+        'Funcao',
         'Unidade',
         'Skype'
     ];

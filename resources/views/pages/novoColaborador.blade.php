@@ -14,6 +14,13 @@
                 <input type="text"  name="Nome" class="valor" required>
 
             </div>
+
+            <div class="group">
+
+                <label for="Funcao" class="campo">Função <p>(Obrigatório)</p></label>
+                <input type="text" name="Funcao" required class="valor">
+
+            </div>
             
             <div class="group">
 
@@ -26,6 +33,13 @@
 
                 <label for="Whatsapp" class="campo">Whatsapp</label>
                 <input type="text" name="Whatsapp" class="valor">
+
+            </div>
+
+            <div class="group">
+
+                <label for="Email" class="campo">Email</label>
+                <input type="email" name="Email" class="valor">
 
             </div>
 

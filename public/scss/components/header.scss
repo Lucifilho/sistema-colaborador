@@ -87,7 +87,7 @@ header{
         gap: 20px !important;
         margin: 10px 10px;
         left: 0;
-        top: 50px;
+        top: 70px;
         width: 100%;
         max-width: 18%;
 
@@ -896,7 +896,6 @@ header.geral{
     }
 }
 
-
 header.index{
 
     display: none !important;
@@ -905,4 +904,74 @@ header.index{
 header.login{
 
     display: none !important;
+}
+
+header.admin{
+
+    background-color: $azulPrincipal;
+
+    .nav{
+
+        .nav-link{
+                
+            color: $branco;
+            font-weight: bold;
+            border:1px solid $branco;
+
+            &:hover{
+
+                color: $azulPrincipal;
+                background-color: $branco;
+                border-radius: 5px;
+
+            }
+        }
+
+    }
+
+    .linksEmergencia{
+
+        .home{
+
+            background-color: $branco ;
+            color: $azulPrincipal;
+
+            &:hover{
+
+                background-color: transparent;
+                border: 1px solid $branco;
+                color: $branco;
+            }
+        }
+
+
+        .brigada{
+            
+            background-color: $vermelhoPrincipal;
+            color: $branco;
+           
+
+            &:hover{
+
+                background-color: $vermelhoTechto;
+            }
+        }
+
+        .portaria{
+        
+           
+            background-color: $branco;
+            color: $azulPrincipal;
+         
+            
+    
+            &:hover{
+    
+                background-color: $azulPrincipal;
+                color: $branco ;
+                border: 1px $branco solid;
+            }   
+        
+        }
+    }
 }

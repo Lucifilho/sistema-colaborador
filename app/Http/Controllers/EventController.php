@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pessoa;
+use Illuminate\Support\Facades\Cache;
+use App\Models\Post;
 use App\Models\User;
 use App\Models\Departamento;
 use App\Models\Unidade;
@@ -82,6 +84,13 @@ class EventController extends Controller
         $path = Request::path();
         
         return view('pages.dashboard' , ['path'=> $path,'lastDate' => $lastDate,'userLogged'=> $userLogged ]);
+    }
+
+    public function portalColaborador (){
+
+        $posts = Post::paginate(15);
+
+        return view('pages.portalColaborador', ['posts' => $posts] );
     }
 
     public function home (){
@@ -203,16 +212,17 @@ class EventController extends Controller
 
         return redirect('/colaborador/'.$request -> id)->with('msg','Colaborador alterado com sucesso');
 
-
     }
 
     public function novoColaboradorPage (){
 
+        
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
             $userLogged = "Guest"; 
         }
+
 
         $lastDateRecord = Pessoa::latest('updated_at')->first();
 
@@ -233,6 +243,15 @@ class EventController extends Controller
 
     }
 
+    public function novoPostPage (){
+        
+            $user = Auth::user();
+
+            $userName = $user->name;
+            
+        return view('pages.novoPost', ['userName' => $userName]);
+    }
+
     public function novoColaborador(Requests $request){
 
 
@@ -247,8 +266,10 @@ class EventController extends Controller
         $pessoa = new Pessoa();
 
         $pessoa -> Nome = $request -> Nome;
+        $pessoa -> Funcao = $request -> Funcao;
         $pessoa -> Ramal = $request -> Ramal;
         $pessoa -> Whatsapp = $request -> Whatsapp;
+        $pessoa -> Email = $request -> Email;
         $pessoa -> Departamento = $request -> Departamento;
         $pessoa -> Unidade = $request -> Unidade;
         $pessoa -> Skype = $request -> Skype;
@@ -257,6 +278,38 @@ class EventController extends Controller
         $pessoa -> save();
 
         return redirect('/geral')-> with('msg','Colaborador cadastrado(a) com sucesso');
+    }
+
+    public function novoPost(Requests $request){
+
+        $post = new Post();
+
+        $post -> titulo = $request -> titulo;
+        $post -> autor = $request -> autor;
+        $post -> tipo = $request -> tipo;
+        $post -> tags = $request -> tags;
+        $post -> categorias = $request -> categorias;
+        $post -> conteudo = $request -> conteudo;
+       
+
+        if ($request -> hasFile('imagePost') && $request->file('imagePost')->isValid()){
+
+            $requestImage = $request -> imagePost;
+
+            $extension = $requestImage -> extension();
+
+            $imageName = md5($requestImage -> getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $request-> imagePost -> move(public_path('imagens/post'), $imageName);
+
+            $post -> imagePost = $imageName;
+
+        }
+
+
+        $post -> save();
+
+        return redirect('/portal-colaborador')-> with('msg','Post cadastrado com sucesso cadastrado(a) com sucesso');
     }
 
     public function excluirColaborador($id){
@@ -271,6 +324,7 @@ class EventController extends Controller
         return redirect('/chiaperini' )->with('msg','Colaborador excluído(a) com sucesso');
     }
 
+    /*
     public function ramaisPage (){
 
         if (Auth::check()) {
@@ -288,6 +342,7 @@ class EventController extends Controller
         } else {
             
         }
+
         $path= Request::path();
 
         $search = "ola";
@@ -308,7 +363,41 @@ class EventController extends Controller
         
             
        
+    } */
+
+    public function ramaisPage (){
+
+        if (Auth::check()) {
+            $userLogged = Auth::user()->name;
+        } else {
+            $userLogged = "Guest"; 
+        }
+    
+        $lastDateRecord = Pessoa::latest('updated_at')->first();
+    
+        if ($lastDateRecord) {
+            $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
+        } else {
+            $lastDate = null; // 
+        }
+    
+        $path = Request::path();
+        $search = "ola";
+    
+        $pessoas = Cache::rememberForever('pessoas', function () {
+            return Pessoa::paginate(15);
+        });
+    
+        return view('pages.ramais', [
+            'pessoas' => $pessoas,
+            'search' => $search, 
+            'path' => $path,
+            'lastDate' => $lastDate,
+            'userLogged' => $userLogged
+        ]);
     }
+    
+
 
 
 }

@@ -8,7 +8,7 @@
 
     <div class="pesquisa">
         
-        <input wire:model="search" wire:ignore type="text" class="form-control" placeholder="Digite aqui, Nome, Ramal, Departamento, ou Unidade do colaborador"/>
+        <input wire:model="search" type="text" class="form-control" placeholder="Digite aqui, Nome, Ramal, Departamento, ou Unidade do colaborador"/>
        
         @if ($search)
             <span class="searchResults">Buscando por: {{$search}}</span>            
@@ -29,11 +29,11 @@
                 <th class="lastTh">Ligar via Microsip</th>
             </tr>
         </thead>
-        <a href="tel:7313">a</a>
         <tbody><!-- Aqui você pode adicionar as linhas da tabela. -->
     
             @foreach($pessoas as $pessoa)    
-                <tr><td>{{$pessoa -> Ramal}}</td><td>
+            <tr>
+                <td>{{$pessoa -> Ramal}}</td><td>
                     
                     @auth
                     <a href="/colaborador/{{$pessoa -> id}}">{{$pessoa -> Nome}}</a>
@@ -46,9 +46,39 @@
                 <td>{{$pessoa -> Whatsapp}}</td>
                 <td>{{$pessoa -> Departamento}}</td>
                 <td>{{$pessoa -> Unidade}}</td>
-                <td><a class="btnLigar" href="tel:{{$pessoa -> ramal}}">Ligar</a></td></tr>
+                <td>
+                    <div class="actions">
+
+                        <a class="btnLigar" href="tel:{{$pessoa -> Ramal}}"><i class="fa fa-phone"></i></a>
+
+                        @if ($pessoa -> Email != '')
+
+                        <a class="btnLigar" href="mailto:{{$pessoa -> Email}}"><i class="fa fa-envelope"></i></a>
+
+                        @else
+                        
+
+                        @endif 
+
+                        @if ($pessoa -> Whatsapp != '')
+
+                        <a class="btnLigar" target="_blank" href="https://api.whatsapp.com/send?phone={{$pessoa -> Whatsapp}}">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                        @else
+                        
+
+                        @endif 
+                    </div>
+                       
+
+                </td>
+            </tr>
             @endforeach
+
         
+
         
         </tbody>
     
@@ -59,17 +89,22 @@
 
             <span class="searchResults">Nenhum resultado encontrado com {{$search}}</span>
 
-        @elseif(count($pessoas)==0)
+    @elseif(count($pessoas)==0)
 
-            <span class="searchResults">Nenhum resultado registrado ainda</span>
+        <span class="searchResults">Nenhum resultado registrado ainda</span>
 
-        @endif
-      
-            <div class="navigation">
+    @endif
+    
+        <div class="navigation">
+            
+            @if ($search)
 
-                {{$pessoas -> links()}}
+            @else
+            {{$pessoas -> links()}}
 
-            </div>
+            @endif
 
         </div>
+
+    </div>
 </div>

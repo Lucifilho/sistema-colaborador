@@ -1,6 +1,5 @@
 @import "../variaveis.scss";
 
-
 main{
 
     padding: 20px 0;
@@ -8,6 +7,8 @@ main{
 
 
     .ramal{
+
+        width: 100%;
 
         .bladeRamal{
 
@@ -70,24 +71,32 @@ main{
                         td{
 
                             border-radius: 0px !important;   
-            
                             text-align: center;
                             font-weight: 600;
                             text-transform: capitalize;
-            
-            
-            
-            
-                            .btnLigar{
+                            border-top: none !important;
+                            vertical-align: middle;
+
+
+                            .actions{
+
+                                display: flex;
+                                justify-content: space-evenly;
+
+                                .btnLigar{
                                 
                                
-                                font-weight: bold;
-                                padding: 8px 20px;
-                                border-radius: 3px;
+                                    font-weight: bold;
+                                    padding: 8px 20px;
+                                    border-radius: 3px;
             
-            
+                                }
                             }
+            
+                          
+
                         }
+
                     }
                 }
             }
@@ -467,4 +476,72 @@ main.login{
     min-height: 954px;
     height: 100%;
     align-items: center;
+}
+
+main.chiaperini-pro{
+
+
+    .ramal{
+
+        .bladeRamal{
+
+
+            .cabecalho{
+
+                color: $branco;
+            }
+
+
+            table{
+              
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            color: $azulPrincipal;
+                        }
+
+                    }
+                }
+            
+            
+                tbody{
+            
+            
+                    tr{
+
+            
+                        td{
+
+                            color: $azulPrincipal;
+                            border-top: 1px solid $azulPrincipal !important;
+            
+                            .btnLigar{
+                                
+                                background-color: $azulPrincipal;
+                                color: $branco;
+                      
+            
+            
+                                &:hover{
+                                    
+                                    color: $azulPrincipal;
+                                    border: 1px solid $azulPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $azulClaro;
+            }
+        }
+    }
 }

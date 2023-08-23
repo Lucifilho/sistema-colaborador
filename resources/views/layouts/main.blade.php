@@ -208,7 +208,7 @@
         
             <div class="version">
 
-                <span class="number">V 1.3.3</span>
+                <span class="number">V 3.4.2</span>
 
             </div>
             

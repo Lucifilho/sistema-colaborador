@@ -1,23 +1,93 @@
 @extends('layouts.main')
 @section('content')
 
-    <div class="colaborador">
+<div class="assinatura"  id="signatureToDownload">
+                
 
-        
+    <html>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <body>
+            <div style="width:460px">
+            <p style="font-family: Arial;font-size:20px;color:#313b6c;font-weight:700;">{{$pessoa -> Nome}}<br>
+                <span style="font-size:14px;font-weight:400;font-style: italic;">{{$pessoa -> Funcao}}</span>
+            </p>
+            <br>
+                <table>
+                    <td width="300px" >
+                        @if($pessoa -> Unidade === 'Chiaperini')
+                        
+                        <img src="http://www.chiaperini.com.br/assinatura-de-email/img/chiaperini.jpg" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        
+                        @elseif( $pessoa -> Unidade === 'Techto')
+                        
+                        <img src="https://techto.com.br/wp-content/uploads/2019/02/logo-techto.png" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        
+                        @elseif( $pessoa -> Unidade === 'Chiaperini Pro')
+
+                        <img src="https://chiaperinipro.com.br/wp-content/uploads/2022/07/Chiaperini_Pro_Logo-300x110.webp" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        
+                        @elseif( $pessoa -> Unidade === 'FNC')
+
+                        <img src="https://files-fundicaonatividade.s3.amazonaws.com/files/Fundicao-Natividade-Chiaperini-Icone-300x300.webp" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        
+            
+                        @elseif( $pessoa -> Unidade === 'Mercadão Lojista')
+
+                        <img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        
+                        
+                        @elseif( $pessoa -> Unidade === 'Techtopel')
+                        
+                        <img src="https://techto.com.br/wp-content/uploads/2019/02/logo-techto.png" title="Chiaperini" alt="Chiaperini" width="250px" >
+
+                        @else
+
+                        <img src="http://www.chiaperini.com.br/assinatura-de-email/img/chiaperini.jpg" title="Chiaperini" alt="Chiaperini" width="250px" >
+
+                        @endif
+                    </td>
+                    <td width="160px">
+                        <table cellpadding="2" cellspacing="0" style="font-family: Arial;font-size:12px;color:#313b6c;font-weight:600;">
+                            <tr>
+                                <td><img src="http://www.chiaperini.com.br/assinatura-de-email/img/email.jpg" alt="Email" width="16px" height="16px"></td>
+                                <td>&nbsp;&nbsp;{{$pessoa -> Email}}</td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://www.chiaperini.com.br/assinatura-de-email/img/telefone.jpg" alt="Telefone Chiaperini" width="16px" height="16px"></td>
+                                <td>&nbsp;&nbsp;(16) 3954 9400 -  Ramal {{$pessoa -> Ramal}}</td>
+                            </tr>
+                            <tr>
+                                <td><img src="http://www.chiaperini.com.br/assinatura-de-email/img/site.jpg" alt="Site Chiaperini" width="16px" height="16px"></td>
+                                <td>&nbsp;&nbsp;www.{{$pessoa -> Unidade}}.com.br</td>
+                            </tr>	
+                        </table>
+                    </td>
+                </table>
+                <br>
+            </div>
+        </body>
+    </html>
+
+</div>
+
+<div class="colaborador">
+
+    <div class="lista">
+    
         <ul class="dados">
 
             <li class="group">
                 
                 <span class="labelCampo">Colaborador</span>
 
-                <span class="valorCampo">{{$pessoa -> Nome}}</span>
+                <span class="valorCampo" id="nomeColaborador">{{$pessoa -> Nome}}</span>
 
             </li>
             <li class="group">
                 
-                <span class="labelCampo">Idade</span>
-                
-                <span class="valorCampo">22 Anos</span>
+                <span class="labelCampo">Função</span>
+
+                <span class="valorCampo">{{$pessoa -> Funcao}}</span>
 
             </li>
             <li class="group action">
@@ -50,7 +120,7 @@
                 
                 <span class="labelCampo">Whatsapp</span>
                 @if($pessoa -> Whatsapp != '') 
-                <a target="_blank" href="https://api.whatsapp.com/send?phone={{$pessoa -> Whatsapp}}"> Contatar</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=55{{$pessoa -> Whatsapp}}"> Contatar</a>
 
                 @else
                     <span class="valorCampo">Não possui</span>
@@ -58,7 +128,18 @@
             
 
             </li>    
+            <li class="group action">
+                
+                <span class="labelCampo">Email</span>
+                @if($pessoa -> Email != '') 
+                <a href="mailto:{{$pessoa -> Email}}"> Mensagem</a>
+
+                @else
+                    <span class="valorCampo">Não possui</span>
+                @endif
             
+
+            </li>        
             <li class="group">
                 
                 <span class="labelCampo">Unidade</span>
@@ -72,59 +153,24 @@
                 
                 <span class="valorCampo">{{$pessoa -> Departamento}}</span>
 
-            </li>
-            @auth    
-            <li class="group lastGroup">
-                
-                <a class="btnSimples" href="/editar-colaborador/{{$pessoa -> id}}">Editar</a>
-                
-            </li>
-            @endauth  
-                       
+            </li>                       
 
         </ul>
 
-        <div class="infoExtras">
+        @auth    
+            <div class="actions">
 
-            <div class="infoColaborador">
+                <a  class="btnSimples" id="downloadButton">Gerar assinatura</a>
 
-                <span class="historico">
-
-                    <h2>Um pouco sobre a tragetória</h2>
-                    
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor 
-                         </p>
-
-
-                </span>
-
-                <span class="funcao">
-
-                    <h2>A importância para a empresa</h2>
-                    
-                    <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor 
-                    </p>
-
-
-                </span>
-
-                <span class="trabalhando">
-
-                    <h2>Fotos</h2>
-                    
-                    <img src="" />
-
-
-                </span>
-
+                
+                <a class="btnSimples" href="/editar-colaborador/{{$pessoa -> id}}">Editar</a>
+                
             </div>
-
-        </div>
+        @endauth  
 
     </div>
+
+</div>
 
 
     <script>
@@ -151,7 +197,27 @@
             }
         }
 
+       
+        document.addEventListener("DOMContentLoaded", function () {
+        const downloadButton = document.getElementById("downloadButton");
+        const signatureToDownload = document.getElementById("signatureToDownload");
+        const nomeColaborador = document.getElementById("nomeColaborador").textContent;
 
+        downloadButton.addEventListener("click", function () {
+            const htmlContent = signatureToDownload.outerHTML;
+            downloadFile(htmlContent, nomeColaborador.toString() + ".htm");
+        });
+
+        function downloadFile(content, fileName) {
+            const blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), content], { type: "text/html;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = fileName;
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+    });
     </script>
 
 @endsection
