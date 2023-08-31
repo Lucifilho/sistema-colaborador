@@ -158,6 +158,7 @@
         </header>
         <main class="{{$path}}">
 
+         
 
             <div class="container">
 
@@ -175,7 +176,7 @@
             <div class="aviso">
 
                 <span class="help">
-                    Caso algum ramal esteja incorreto, por favor, por favor informar a recepção.<br> Ultima atualização em:     {{$lastDate}}
+                    Caso algum ramal esteja incorreto, por favor informar a recepção.<br> Ultima atualização em:     {{$lastDate}}
                     .
                 </span>
         
@@ -208,7 +209,7 @@
         
             <div class="version">
 
-                <span class="number">V 3.4.2</span>
+                <span class="number">V 3.4.5</span>
 
             </div>
             
@@ -220,7 +221,6 @@
         <script>
 
             var msg = document.getElementById("msg");
-
             var menuColuna = document.getElementById('columnMenu')
             var barraMenu = document.getElementById('barraMenu')
             var menuClose = document.getElementById('menuClose')

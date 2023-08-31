@@ -23,10 +23,6 @@ class Pessoa extends Component
 
             $path = explode('/', $previousUrl);
             $path = $path[3];
-            $newPath = explode('?', $path);
-            $newPath= $newPath[0];
-            $path = $newPath;
-
 
         }else{
 
@@ -54,14 +50,7 @@ class Pessoa extends Component
 
         return view('livewire.pessoa', [
 
-            'pessoas' => Pessoas::where('Unidade',  $path )->where(function ($query) use( $search){
-
-                $query->where('Ramal', 'like', '%' .  $this->search . '%' )
-                ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
-                ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
-                ->orWhere('Nome', 'like', '%' .  $this->search . '%');
-            })
-            ->paginate(5),
+            'pessoas' => Pessoas::where('Unidade',$path)->where('Ramal', 'like', '%'.$this->search.'%')->paginate(5),
         ]);
     }
 }

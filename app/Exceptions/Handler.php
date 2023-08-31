@@ -18,13 +18,35 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
+    public function report(Throwable $exception)
+{
+    if ($exception instanceof \Illuminate\Database\QueryException && $exception->getCode() == 2002) {
+        $path = request()->path(); // Get the current path
+        $exception->path = $path; // Attach the path to the exception
+
+        parent::report($exception);
+    } else {
+        parent::report($exception);
+    }
+}
+
     /**
      * Register the exception handling callbacks for the application.
      */
-    public function register(): void
+    public function render($request, Throwable $exception)
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+        if ($exception instanceof \Illuminate\Database\QueryException &&
+        $exception->getCode()) {
+        $path = 'erros'; // Get the path from the exception
+
+        $lastDate = null; // 
+
+
+        return response()->view('pages.errors', ['path' => $path, 'lastDate' => $lastDate], 500);
     }
+
+    
+        return parent::render($request, $exception);
+    }
+    
 }

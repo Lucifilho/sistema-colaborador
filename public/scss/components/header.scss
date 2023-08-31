@@ -754,7 +754,6 @@ header.dashboard{
     }
 }
 
-
 header.techtopel{
 
     background-color: $azulPrincipal;
@@ -906,7 +905,7 @@ header.login{
     display: none !important;
 }
 
-header.admin{
+header.admin, header.erros{
 
     background-color: $azulPrincipal;
 
@@ -975,3 +974,4 @@ header.admin{
         }
     }
 }
+

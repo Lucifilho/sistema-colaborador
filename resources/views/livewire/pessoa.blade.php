@@ -96,13 +96,8 @@
     @endif
     
         <div class="navigation">
-            
-            @if ($search)
 
-            @else
-            {{$pessoas -> links()}}
-
-            @endif
+            {{ $pessoas -> links() }}           
 
         </div>
 
