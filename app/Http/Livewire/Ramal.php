@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Livewire;
-use App\Models\Pessoa as Pessoas;
 use Livewire\Component;
 use App\Models\Unidade;
 use Request;
 
 
 
-class Pessoa extends Component
+class Pessoaaa extends Component
 {
     public $search = '';
 

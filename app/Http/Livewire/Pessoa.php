@@ -6,11 +6,11 @@ use Livewire\Component;
 use App\Models\Unidade;
 use Request;
 
-
-
 class Pessoa extends Component
 {
     public $search = '';
+
+    protected $queryString = ['search'];
 
     public function render()
     {
@@ -34,8 +34,6 @@ class Pessoa extends Component
 
 
         }
-
-        
         
         if ($path === 'chiaperini-pro') {
             
@@ -51,17 +49,40 @@ class Pessoa extends Component
             $path = $path;
         } 
 
+        if($path === 'geral'){
 
-        return view('livewire.pessoa', [
+            $pessoas = Pessoas::where(  function ($query) use( $search){
+                $query->where('Nome', 'like', '%' .  $this->search . '%' )
+                    ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
+                    ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
+                    ->orWhere('Unidade', 'like', '%' . $this->search .'%' )
+                    ->orWhere('Ramal', 'like', '%' .  $this->search . '%');
+                    
+            })
+            ->orderBy('Unidade')
+            ->orderBy('Departamento')
+            ->orderBy('Nome')
+            ->paginate(5);
 
-            'pessoas' => Pessoas::where('Unidade',  $path )->where(function ($query) use( $search){
+
+        }else{
+
+            $pessoas = Pessoas::where('Unidade',  $path )->where(function ($query) use( $search){
 
                 $query->where('Ramal', 'like', '%' .  $this->search . '%' )
                 ->orWhere('Whatsapp', 'like', '%' .  $this->search . '%')
                 ->orWhere('Departamento', 'like', '%' .  $this->search . '%' )
                 ->orWhere('Nome', 'like', '%' .  $this->search . '%');
             })
-            ->paginate(5),
+            ->paginate(5);
+        }
+
+     
+
+
+        return view('livewire.pessoa', [
+
+            'pessoas' => $pessoas ,
         ]);
     }
 }
