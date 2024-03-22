@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Ramais - Atualizada em45100,4255513889</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk");*{font-family:'Space Grotesk', sans-serif}body{background-color:#fff;display:flex;flex-direction:column;gap:20px}a{text-decoration:none !important}header{background-color:#313b6c;display:flex;justify-content:center;padding:5px}header .nav .nav-link{color:#fff}main .container .title1{text-align:center;color:#313b6c;font-weight:700}main .container form .pesquisa{display:flex;flex-direction:column;gap:20px}main .container form .pesquisa .barraPesquisa{border-radius:5px}main .container form .pesquisa .btn{width:200px;padding:8px 35px;background-color:#313b6c;color:#fff;font-weight:700}main .container form .pesquisa .btn:hover{color:#313b6c;border:1px solid #313b6c;background-color:#fff}main .container table{border-radius:20px}main .container table thead tr th{background-color:#313b6c;color:#fff;text-transform:uppercase;text-align:center}main .container table tbody tr td{color:#313b6c;text-align:center;font-weight:600;border-top:1px solid #313b6c !important;text-transform:capitalize}main .container table tbody tr td .btnLigar{background-color:#313b6c;color:#fff;font-weight:bold;padding:8px 20px;border-radius:3px}main .container table tbody tr td .btnLigar:hover{color:#313b6c;border:1px solid #313b6c;background-color:#fff}main .container .table-hover tbody tr:hover td{background-color:#d1d8fa}footer{text-align:center;background-color:#313b6c;padding:10px 0}footer .dataUp{font-size:14px;font-weight:600;color:#fff}
+
+</style>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+           
+            <a class="nav-link" target="_blank" href="chiaperini.html">Chiaperini</a>
+            <a class="nav-link" target="_blank" href="chiaperinipro.html">Chiaperini Pro</a>
+            <a class="nav-link" target="_blank" href="techto.html">Techto</a>
+            <a class="nav-link" target="_blank" href="mercadaolojista.html">Mercadão Lojista</a>
+            <a class="nav-link" target="_blank" href="fnc.html">Fundição Natividade</a>
+
+        </nav>
+
+
+    </header>
+    <main>
+        <div class="container" width="100%">
+            <h1 class="title1">Lista de Ramais</h1>
+            
+            
+            <form>
+                <div class="form-group pesquisa">
+                    <input type="search" placeholder="Digite aqui, Nome, ramal, departamento ou unidade do colaborador" class="form-control barraPesquisa"  id="nome">
+                    <a class="btn" href="../projetos/index.html"  > Limpar busca </a>
+                </div>
+    
+             
+                <div style="display: none">
+                    <div class="form-group" style="width: 70% "><label for="ramal">Ramal:</label>
+                        <select class="form-control" id="ramal">
+    
+                            <option value="">Todos</option>
+                            <option value="7311"></option>
+                            <option value="7313"></option>
+                            <option value="7314"></option>
+                            <option value="7315"></option>
+                            <option value="7316"></option>
+                            <option value="7317"></option>
+                            <option value="7322"></option>
+                            <option value="7316"></option>
+                            <option value="7311"></option>
+    
+    
+                        </select>
+                    </div>
+                    <div class="form-group" style="width: 70% "><label for="whatsapp">whatsapp:</label>
+                        <select class="form-control" id="whatsapp">
+    
+                            <option value="">whatsapp</option>
+                
+                        </select>
+                    </div>
+                    <div class="form-group" style="width: 70% "><label for="setor">Setor:</label>
+                        <select class="form-control" id="setor">
+                            <option value="">Todos</option>
+                            <option value="Administrativo">Administrativo</option>
+                            <option value="Almoxarifado">Almoxarifado</option>
+                            <option value="Assistência Técnica">Assistência Técnica</option>
+                            <option value="Calderaria">Calderaria</option>
+                            <option value="Centro de Treinamento">Centro de Treinamento</option>
+                            <option value="Comecio Exterior">Comecio Exterior</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Compressores Parafusos">Compressores Parafusos</option>
+                            <option value="Diretoria">Diretoria</option>
+                            <option value="Engenharia">Engenharia</option>
+                            <option value="Expedição">Expedição</option>
+                            <option value="Faturamento">Faturamento</option>
+                            <option value="Ferramentaria">Ferramentaria</option>
+                            <option value="Finaceiro">Finaceiro</option>
+                            <option value="Gerente de Produção">Gerente de Produção</option>
+                            <option value="Gerentes de Vendas">Gerentes de Vendas</option>
+                            <option value="Gestão de Produtos">Gestão de Produtos</option>
+                            <option value="Laboratorio">Laboratorio</option>
+                            <option value="Logistica">Logistica</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Montagem Final">Montagem Final</option>
+                            <option value="Motoristas">Motoristas</option>
+                            <option value="Nacionalizados">Nacionalizados</option>
+                            <option value="Produção">Produção</option>
+                            <option value="Qualidade">Qualidade</option>
+                            <option value="RH">RH</option>
+                            <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                            <option value="Setor 10">Setor 10</option>
+                            <option value="Supermercado de Peças">Supermercado de Peças</option>
+                            <option value="Supervisores">Supervisores</option>
+                            <option value="Supply Chain">Supply Chain</option>
+                            <option value="TI -Infra">TI -Infra</option>
+                            <option value="TI- Sistemas">TI- Sistemas</option>
+                            <option value="Usinagem">Usinagem</option>
+                            <option value="Vendas">Vendas</option>
+                            <option value="Vendas de Peças">Vendas de Peças</option>
+                        </select></div>
+                    <div class="form-group" style="width: 30%;"><label for="unidade">Unidade de Negócios</label>
+                        <select class="form-control" id="unidade">
+                            <option value="">Todas</option>
+                            <option value="Chiaperini">Chiaperini</option>
+                            <option value="Chiaperini Pro">Chiaperini Pro</option>
+                            <option value="Fundição Natividade">Fundição Natividade</option>
+                            <option value="Mercadão Lojista">Mercadão Lojista</option>
+                            <option value="SR Comercial">SR Comercial</option>
+                            <option value="Techto">Techto</option>
+                            <option value="Techtopel">Techtopel</option>
+                            <option value="Transportadora Hora Certa">Transportadora Hora Certa</option>
+                        </select>
+                    </div>
+                </div><button  style="display: none" type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="firstTh">Ramal</th>
+                        <th>Nome</th>
+                        <th>Whatsapp</th>
+                        <th>Departamento</th>
+                        <th>Unidade</th>
+                        <th class="lastTh">Ligar via Microsip</th>
+                    </tr>
+                </thead>
+                <tbody><!-- Aqui você pode adicionar as linhas da tabela. -->
+                    <tr>
+                        <td>7311</td>
+                        <td>Pedro Souza</td>
+                        <td>16 981430740</td>
+                        <td>Administrativo</td>
+                        <td>Chiaperini</td>
+                        <td><a class="btnLigar" href="tel:7311">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7312</td>
+                        <td>Joao</td>
+                        <td></td>
+                        <td>Almoxarifado</td>
+                        <td>Chiaperini Pro</td>
+                        <td><a class="btnLigar" href="tel:7312">Ligar</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>7313</td>
+                        <td>Lucas</td>
+                        <td></td>
+                        <td>Assistência Técnica</td>
+                        <td>Fundição Natividade</td>
+                        <td><a class="btnLigar" href="tel:7313">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7314</td>
+                        <td>Jose</td>
+                        <td></td>
+                        <td>Calderaria</td>
+                        <td>Mercadão Lojista</td>
+                        <td><a class="btnLigar" href="tel:7314">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7315</td>
+                        <td>raimundo</td>
+                        <td></td>
+                        <td>Centro de Treinamento</td>
+                        <td>SR Comercial</td>
+                        <td><a class="btnLigar" href="tel:7315">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7316</td>
+                        <td>beta</td>
+                        <td></td>
+                        <td>Comecio Exterior</td>
+                        <td>Techto</td>
+                        <td><a class="btnLigar" href="tel:7316">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7317</td>
+                        <td>alek</td>
+                        <td></td>
+                        <td>Compras</td>
+                        <td>Techtopel</td>
+                        <td><a class="btnLigar" href="tel:7317">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7318</td>
+                        <td>Fernando</td>
+                        <td></td>
+                        <td>Compressores Parafusos</td>
+                        <td>Transportadora Hora Certa</td>
+                        <td><a class="btnLigar" href="tel:7318">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7319</td>
+                        <td>Bia</td>
+                        <td></td>
+                        <td>Diretoria</td>
+                        <td>Chiaperini</td>
+                        <td><a class="btnLigar" href="tel:7319">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7320</td>
+                        <td>Joaquim</td>
+                        <td></td>
+                        <td>Engenharia</td>
+                        <td>Chiaperini Pro</td>
+                        <td><a class="btnLigar" href="tel:7320">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7321</td>
+                        <td>Cido</td>
+                        <td></td>
+                        <td>Expedição</td>
+                        <td>Fundição Natividade</td>
+                        <td><a class="btnLigar" href="tel:7321">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7322</td>
+                        <td>Sandro</td>
+                        <td></td>
+                        <td>Faturamento</td>
+                        <td>Mercadão Lojista</td>
+                        <td><a class="btnLigar" href="tel:7322">Ligar</a></td>
+                    </tr>
+    
+    
+    
+    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+
+        <span class="dataUp">Atualizada em 27/06/2023</span>
+
+    </footer>
+    
+    
+    
+    <script>
+
+        
+
+        $(document).ready(function () { 
+            $("#nome").on("keyup", function (event) { 
+
+                var nome = $("#nome").val().toLowerCase(); 
+                var setor = $("#setor").val().toLowerCase();
+                var ramal = $("#ramal").val().toLowerCase();  
+                var unidade = $("#unidade").val().toLowerCase();
+                var whatsapp =  $("#whatsapp").val().toLowerCase(); 
+
+
+
+                $("tbody tr").filter(function () { 
+                    
+                    var ramalCelula = $(this).find("td:eq(0)").text().toLowerCase();  
+                    var nomeCelula = $(this).find( "td:eq(1)" ).text().toLowerCase();
+                    var whatsappCelula = $(this).find("td:eq(2)").text().toLowerCase();
+                    var setorCelula = $(this).find("td:eq(3)").text().toLowerCase();
+                    var unidadeCelula = $(this).find("td:eq(4)").text().toLowerCase();
+
+                        
+                    $(this).toggle(nomeCelula.indexOf(nome) && setorCelula.indexOf(nome) &&  unidadeCelula.indexOf(nome) && ramalCelula.indexOf(nome) && ramalCelula === ramal    );
+
+                    console.log(nome);
+
+                                }); 
+            }); 
+        });
+            
+    </script>
+    
+
+</body>
+
+</html>

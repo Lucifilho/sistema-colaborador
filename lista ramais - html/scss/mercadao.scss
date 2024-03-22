@@ -1,0 +1,173 @@
+@import "variaveis.scss";
+
+.bodyMercadao{
+
+    background-color: $amareloMercadao;
+        
+    .headerMercadao{
+
+        padding: 10px 0;
+        background-color: transparent;
+
+        
+        .nav{
+
+            .nav-link{
+                
+                color: $vermelhoPrincipal;
+                font-weight: bold;
+
+                &:hover{
+
+                    color: $amareloMercadao;
+                    background-color: $vermelhoPrincipal;
+                    border-radius: 5px;
+
+                }
+            }
+        }
+
+    }
+
+
+        
+    .mainMercadao{
+
+        .container{
+
+            .title1{
+                
+                text-align: center;
+                color: $amareloMercadao;
+                font-weight: 700;
+            }
+        
+            form{
+        
+                .pesquisa{
+        
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+        
+                    .barraPesquisa{
+        
+                        border-radius: 5px;
+                    }
+        
+                    .btn{
+                        
+                        width: 200px;
+                        padding: 8px 35px;
+                        color: $vermelhoPrincipal;
+                        background-color: $branco;
+                        font-weight: 700;
+        
+                        
+                        &:hover{
+                                    
+                            color: $amareloMercadao;
+                            border: 1px solid $amareloMercadao;
+                            background-color: $vermelhoPrincipal;
+
+        
+                        }
+                    }
+                }
+            }
+        
+            table{
+        
+                background-color: $branco;
+                border-radius: 0;
+        
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $vermelhoPrincipal;
+                            color: $amareloPrincipal;              
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        .firstTh{
+
+                            border-radius: 5px 0 0 0  !important;
+                        }
+
+                        .lastTh{
+
+                            border-radius: 0 5px 0 0  !important;
+                        }
+                    }
+                }
+            
+            
+                tbody{
+            
+                    border-radius: 0px !important;   
+            
+                    tr{
+
+                        border-radius: 0px !important;            
+            
+                        td{
+
+                            border-radius: 0px !important;   
+            
+                            color: $preto;
+                            text-align: center;
+                            font-weight: 600;
+                            border-top: 1px solid $amareloMercadao !important;
+                            text-transform: capitalize;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $amareloMercadao;
+                                color: $branco;
+                                font-weight: bold;
+                                padding: 8px 20px;
+                                border-radius: 3px;
+            
+            
+                                &:hover{
+                                    
+                                    color: $vermelhoPrincipal;
+                                    border: 1px solid $vermelhoPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $amareloClaro;
+            }
+            
+        
+        }
+    }
+
+    .footerMercadao{
+
+        background-color: transparent;
+
+
+        
+        .dataUp{
+            color: $vermelhoPrincipal;
+        }
+    }
+
+}

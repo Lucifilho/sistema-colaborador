@@ -1,0 +1,141 @@
+.indexHeader {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center
+}
+
+.indexHeader .titulo h1 {
+    font-size: 70px;
+    font-weight: 500
+}
+
+.indexHeader .titulo h1 .negrito {
+    font-weight: bolder
+}
+
+.indexMain .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px
+}
+
+.indexMain .container .escolhas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.indexMain .container .escolhas .chose {
+    padding: 20px 50px;
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px
+}
+
+.indexMain .container .escolhas .chose h2 {
+    font-size: 18px;
+    font-weight: 600
+}
+
+.indexMain .container .escolhas #listaLinks {
+    flex-direction: column;
+    gap: 10px;
+    width: 600px
+}
+
+.indexMain .container .escolhas #listaLinks li {
+    width: 600px
+}
+
+.indexMain .container .escolhas #listaLinks li .link {
+    display: flex;
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+    border: 2px #000 solid;
+    padding: 10px 0px 10px 50px;
+    border-radius: 20px
+}
+
+.indexMain .container .escolhas #listaLinks li .link:hover {
+    background-color: #000;
+    transform: scale(1.05);
+    color: #fff
+}
+
+.indexFooter {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+
+.indexFooter .help {
+    width: 100%;
+    max-width: 750px;
+    padding: 15px;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 18px
+}
+
+.indexFooter .icones {
+    display: flex;
+    gap: 50px
+}
+
+.indexFooter .icones a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 15px;
+    border-radius: 50%;
+    width: 110px;
+    justify-content: space-evenly
+}
+
+.indexFooter .icones a:hover {
+    background-color: #c9c5c5;
+    transform: scale(1.05)
+}
+
+.indexFooter .icones a span {
+    color: #313b6c
+}
+
+.indexFooter .icones a .suportIcon {
+    width: 30px
+}
+
+.indexFooter .icones .brigada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: #cd1a1a;
+    padding: 15px;
+    border-radius: 50%;
+    width: 110px;
+    justify-content: space-evenly
+}
+
+.indexFooter .icones .brigada:hover {
+    background-color: rgba(205, 26, 26, 0.85);
+    transform: scale(1.05)
+}
+
+.indexFooter .icones .brigada i {
+    color: #fff;
+    font-size: 30px
+}
+
+.indexFooter .icones .brigada span {
+    color: #fff;
+    font-size: 12px
+}

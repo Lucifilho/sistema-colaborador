@@ -1,0 +1,191 @@
+@import "variaveis.scss";
+
+.indexHeader{
+    
+    background-color: $branco;
+    padding: 50px 0;
+    text-align: center;
+    
+    .titulo{
+
+        h1{
+            font-size: $fs_70;
+            font-weight: 500;
+
+            .negrito{
+
+                font-weight: bolder;
+            }
+        }
+    }
+
+}
+
+.indexMain{
+    
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+
+
+        .escolhas{
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .chose{
+                
+                padding: 20px 50px;
+                background-color: $cinza;
+                border-radius: 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 600px;
+
+                
+
+
+                h2{
+                    
+                    font-size: $fs_18;
+                    font-weight: 600;
+                }
+            }            
+
+            #listaLinks{
+
+                flex-direction: column;
+                gap: 10px ;
+                width: 600px;
+                
+                li{
+
+                    width: 600px;
+
+                    
+                    .link{
+                               
+                        display: flex;
+                        width: 100%;
+                        color: $preto;
+                        font-weight: bold;
+
+                        border: 2px $preto solid ;
+                        padding: 10px 0px 10px 50px;                                        
+                        border-radius: 20px;
+
+                        &:hover{
+
+                            background-color: $preto;
+                            transform: scale(1.05);
+                            color: $branco;
+
+                        }
+
+                        
+
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+}
+
+.indexFooter{
+    
+    background-color: $branco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    
+
+    .icones{
+
+        display: flex;
+        gap: 50px;
+
+
+        a{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $cinza;
+            padding: 15px;
+            border-radius: 50%;
+            width: 110px;
+            justify-content: space-evenly;
+
+
+    
+            &:hover{
+    
+                background-color: $cinzaHover;
+                transform: scale(1.05);
+
+    
+            }
+    
+            span{
+    
+                color: $azulPrincipal;
+    
+            }
+    
+            .suportIcon{
+    
+                width: 30px;
+            }
+        }
+    
+        .brigada{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            background-color: $vermelhoPrincipal;
+            padding: 15px;
+            border-radius: 50%;
+            width: 110px;
+            justify-content: space-evenly;
+
+            &:hover{
+
+            background-color: $vermelhoTechto;
+            transform: scale(1.05);
+
+            }
+
+    
+           i{
+    
+                color: $branco;
+                font-size: 30px;
+            }
+    
+            span{
+    
+                color: $branco;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    
+
+    
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Ramais - Atualizada em45100,4255513889</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+
+            <a class="nav-link"  href="chiaperini.html">Chiaperini</a>
+            <a class="nav-link"  href="techto.html">Techto</a>
+            <a class="nav-link"  href="mercadaolojista.html">Mercadão Lojista</a>
+            <a class="nav-link"  href="fnc.html">Fundição Natividade</a>
+
+        </nav>
+        
+        <div class="linksEmergencia">
+
+            <a class="brigada" href="tel:7264"><i class="fa-solid fa-fire-flame-curved"></i><span>Brigada de incêndio</span> </a>
+            
+            <a class="portaria" href="tel:6000"><i class="fa-solid fa-phone"></i><span>Portaria</span> </a>
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container" width="100%">
+            <h1 class="title1">Lista de Ramais</h1>
+            
+            
+            <form>
+
+                <div class="form-group pesquisa">
+                    <input onkeyup="busca()" type="text" id="campoBusca" placeholder="Digite aqui, Nome, ramal, departamento ou unidade do colaborador"  class="form-control barraPesquisa">
+                    <a class="btn" href="../projetos/index.html"  > Limpar busca </a>
+                </div>
+    
+             
+            </form>
+            <table id="tabelaDados" class="table table-bordered table-hover table-striped">
+
+                <thead>
+                
+                    <tr>
+                        <th class="firstTh">Ramal</th>
+                        <th>Nome</th>
+                        <th>Whatsapp</th>
+                        <th>Departamento</th>
+                        <th>Unidade</th>
+                        <th class="lastTh">Ligar via Microsip</th>
+                    </tr>
+
+                </thead>
+                <tbody><!-- Aqui você pode adicionar as linhas da tabela. -->
+                    <tr>
+                        <td>7311</td>
+                        <td>Pedro Souza</td>
+                        <td>16 981430740</td>
+                        <td>Administrativo</td>
+                        <td>Chiaperini</td>
+                        <td><a class="btnLigar" href="tel:7311">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7312</td>
+                        <td>Joao</td>
+                        <td></td>
+                        <td>Almoxarifado</td>
+                        <td>Chiaperini Pro</td>
+                        <td><a class="btnLigar" href="tel:7312">Ligar</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>7313</td>
+                        <td>Lucas</td>
+                        <td></td>
+                        <td>Assistência Técnica</td>
+                        <td>Fundição Natividade</td>
+                        <td><a class="btnLigar" href="tel:7313">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7314</td>
+                        <td>Jose</td>
+                        <td></td>
+                        <td>Calderaria</td>
+                        <td>Mercadão Lojista</td>
+                        <td><a class="btnLigar" href="tel:7314">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7315</td>
+                        <td>raimundo</td>
+                        <td></td>
+                        <td>Centro de Treinamento</td>
+                        <td>SR Comercial</td>
+                        <td><a class="btnLigar" href="tel:7315">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7316</td>
+                        <td>beta</td>
+                        <td></td>
+                        <td>Comecio Exterior</td>
+                        <td>Techto</td>
+                        <td><a class="btnLigar" href="tel:7316">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7317</td>
+                        <td>alek</td>
+                        <td></td>
+                        <td>Compras</td>
+                        <td>Techtopel</td>
+                        <td><a class="btnLigar" href="tel:7317">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7318</td>
+                        <td>Fernando</td>
+                        <td></td>
+                        <td>Compressores Parafusos</td>
+                        <td>Transportadora Hora Certa</td>
+                        <td><a class="btnLigar" href="tel:7318">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7319</td>
+                        <td>Bia</td>
+                        <td></td>
+                        <td>Diretoria</td>
+                        <td>Chiaperini</td>
+                        <td><a class="btnLigar" href="tel:7319">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7320</td>
+                        <td>Joaquim</td>
+                        <td></td>
+                        <td>Engenharia</td>
+                        <td>Chiaperini Pro</td>
+                        <td><a class="btnLigar" href="tel:7320">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7321</td>
+                        <td>Cido</td>
+                        <td></td>
+                        <td>Expedição</td>
+                        <td>Fundição Natividade</td>
+                        <td><a class="btnLigar" href="tel:7321">Ligar</a></td>
+                    </tr>
+                    <tr>
+                        <td>7322</td>
+                        <td>Sandro</td>
+                        <td></td>
+                        <td>Faturamento</td>
+                        <td>Mercadão Lojista</td>
+                        <td><a class="btnLigar" href="tel:7322">Ligar</a></td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+
+        <span class="dataUp">Atualizada em 10/07/2023</span>
+
+    </footer>
+    
+    
+    
+    
+    <script>
+
+        function busca() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("campoBusca");
+
+        filter = String(input.value.toUpperCase());
+        table = document.getElementById("tabelaDados");
+        tr = table.getElementsByTagName("tr");
+
+
+        filterrepl = filter.replace( /[À|Á|Â|Ã]/g ,"A").replace( /[É|È|Ê|]/g ,"E").replace( /[Ç]/g ,"C").replace( /[Ì|Í||]/g ,"I").replace( /[Ó|Ò|Õ|Ô]/g ,"O").replace( /[Ú|Ù|Û|]/g ,"U");
+        
+        console.log(filterrepl);
+
+        for (i = 0; i < tr.length; i++) {
+
+
+            td = tr[i].getElementsByTagName("td")[0]; // coluna 1
+            td1 = tr[i].getElementsByTagName("td")[1]; // coluna 2
+            td3 = tr[i].getElementsByTagName("td")[3]; // coluna 3 
+            td4 = tr[i].getElementsByTagName("td")[4]; // coluna 4
+
+
+
+
+            //td1 = td1.replaceArray( /[À|Á|Â|Ã]/g ,"A").replace( /[É|È|Ê|]/g ,"E").replace( /[Ç]/g ,"C").replace( /[Ì|Í||]/g ,"I").replace( /[Ó|Ò|Õ|Ô]/g ,"O").replace( /[Ú|Ù|Û|]/g ,"U");
+
+
+            if (td || td1 || td3 || td4 ) {
+
+                if ( (td.innerHTML.toUpperCase().indexOf(filterrepl) > -1) 
+                || (td1.innerHTML.toUpperCase().replace( /[À|Á|Â|Ã]/g ,"A").replace( /[É|È|Ê|]/g ,"E").replace( /[Ç]/g ,"C").replace( /[Ì|Í||]/g ,"I").replace( /[Ó|Ò|Õ|Ô]/g ,"O").replace( /[Ú|Ù|Û|]/g ,"U").indexOf(filterrepl) > -1) 
+                || (td3.innerHTML.toUpperCase().replace( /[À|Á|Â|Ã]/g ,"A").replace( /[É|È|Ê|]/g ,"E").replace( /[Ç]/g ,"C").replace( /[Ì|Í||]/g ,"I").replace( /[Ó|Ò|Õ|Ô]/g ,"O").replace( /[Ú|Ù|Û|]/g ,"U").indexOf(filterrepl) > -1) 
+                || (td4.innerHTML.toUpperCase().replace( /[À|Á|Â|Ã]/g ,"A").replace( /[É|È|Ê|]/g ,"E").replace( /[Ç]/g ,"C").replace( /[Ì|Í||]/g ,"I").replace( /[Ó|Ò|Õ|Ô]/g ,"O").replace( /[Ú|Ù|Û|]/g ,"U").indexOf(filterrepl) > -1) )  {            
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        } 
+
+    </script>
+    
+
+</body>
+
+</html>

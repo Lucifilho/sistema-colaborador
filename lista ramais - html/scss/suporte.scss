@@ -1,0 +1,103 @@
+//suporte@chiaperini.com.br
+@import "variaveis.scss";
+
+.mainSuporte{
+
+    align-self: center;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+
+    .cards{
+
+        .listaPessoas{
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            .pessoa{
+
+                display: flex;
+                flex-direction: column;
+                background-color: $cinza;
+                border-radius: 5px;
+                gap: 20px;
+                padding: 10px 0;
+
+                .conteudo{
+
+                    display: flex;
+
+
+                    .rightSide{
+
+                        display: flex;
+                        flex-direction: column;
+                        width: 300px;
+    
+    
+                        .label{
+    
+                            padding: 15px;
+                            border-bottom: 1px solid $preto;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+    
+                        .lastLabel{
+    
+                            border-bottom: none !important
+                        }
+    
+    
+                    }
+    
+                    .leftSide{
+    
+                        
+                        
+                        display: flex;
+                        flex-direction: column;
+                        width: 350px;
+    
+                        .dado{
+    
+                            padding: 15px;
+                            border-bottom: 1px solid $preto;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+    
+                        .lastDado{
+    
+                            border-bottom: none !important
+    
+                        }
+    
+                    }
+                }
+
+                .fundo{
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+                    .label{
+    
+                        padding: 15px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+
+}

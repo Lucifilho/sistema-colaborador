@@ -1,0 +1,1368 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css" rel="stylesheet" />
+<style>
+    @page {
+        size: A4
+    }
+
+    * {
+        margin: 0;
+        padding: 0
+    }
+
+    a {
+        text-transform: none !important
+    }
+
+    li {
+        list-style: none
+    }
+
+    header {
+        display: flex
+    }
+
+    header .logo {
+        display: flex;
+        justify-content: flex-start;
+        align-self: center;
+        width: 20%;
+        padding: 0 5px;
+    }
+
+    header .logo img {
+        display: flex;
+        width: 120px;
+        height: auto;
+        position: relative;
+    }
+
+    header .textos {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        width: 80%
+    }
+
+    header .textos .baixo {
+        display: flex;
+        width: 100%;
+        padding: 10px 0 0 0;
+        justify-content: flex-end;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 5px;
+        align-items: flex-end;
+    }
+
+    .par header .textos .baixo {
+        display: flex;
+        width: 100%;
+        padding: 10px 0 0 0;
+        justify-content: flex-start;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 5px;
+        align-items: flex-end;
+    }
+
+    header .textos .baixo .listaLang {
+        display: flex;
+        gap: 20px;
+        padding: 0 25px 5px 25px;
+        align-items: flex-end
+    }
+
+    header .textos .baixo .listaLang .lang {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        text-align: center
+    }
+
+    header .textos .baixo .listaLang .bar {
+        width: 2px;
+        height: 13px;
+        background-color: #fff
+    }
+
+    header .textos .baixo .listaLang .barLight {
+        width: 1px;
+        height: 10px;
+        background-color: #fff
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 17px 0
+    }
+
+    main .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+
+    main .container .produtos {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        ;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .container .produtos .produto {
+        background-color: #fff;
+        border: 1px #e1e3e3 solid;
+        border-radius: 5px;
+        display: flex;
+        height: 195px;
+        flex-direction: column;
+        width: 172px
+    }
+
+    main .container .produtos .produto .img {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px #e1e3e3 solid
+    }
+
+    main .container .produtos .produto .img img {
+        width: 80%;
+        justify-content: center;
+    }
+
+    main .container .produtos .produto .textos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4px;
+        width: 140px;
+        padding: 5px
+    }
+
+    main .container .produtos .produto .textos .nome {
+        text-transform: uppercase;
+        font-size: 10px
+    }
+
+    main .container .produtos .produto .textos .dado {
+        display: flex;
+        align-items: flex-end;
+        gap: 0
+    }
+
+    main .container .produtos .produto .textos .dado .label,
+    main .container .produtos .produto .textos .dado .codigo {
+        font-size: 10px;
+        font-weight: 800;
+        width: 60px
+    }
+
+    .linha {
+        width: 230px;
+    }
+
+    .linha-marca {
+        width: 150px;
+        padding-top: 5px;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        height: 60px;
+        align-items: flex-end;
+    }
+
+    footer .page {
+        display: flex;
+        justify-content: center;
+        background-color: #ff0000;
+        width: 7%;
+        border-radius: 10px 10px 5px 0;
+        height: 50px
+    }
+
+    .par footer .page {
+        display: flex;
+        justify-content: center;
+        background-color: #ff0000;
+        width: 10%;
+        border-radius: 10px 10px 0 5px;
+        height: 50px
+    }
+
+    footer .page .numero {
+        font-size: 15px;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+
+    footer .links {
+        width: 93%
+    }
+
+    footer .links .cima {
+        color: #000000;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .par footer .links .cima {
+        color: #000000;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 0 10px 3px 0;
+    }
+
+    footer .links .baixo {
+        height: 25px;
+        background-color: #ff0000;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .par footer .links .baixo {
+        height: 25px;
+        background-color: #ff0000;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .oculto {
+        width: 172px
+    }
+</style>
+
+<body class="A4">
+    <section class="sheet padding-10mm">
+        <header>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/18982607/cdb8517813.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190591/826f4ffa59.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE 33+ SCOTCH 19MMX10M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4488</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190581/aaa91d3631.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE 33+ SCOTCH 19MMX20M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4489</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184185097/bed9a9f41c.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL AMARELO 18MMX10M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4497</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190418/9887089ae6.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL AZUL 18MMX10M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4498</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190575/cd883069b4.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL SLIM 18MMX10M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4493</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190562/1490e08e6e.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL SLIM 18MMX20M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4494</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190550/625556c53f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL SLIM 18MMX5M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4495</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/184190395/86796ab6e1.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ISOLANTE IMPERIAL VERMELHO 18MMX10M - 3M</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4499</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/31273755/fita-adesiva-marrom-48mm-x-45m-adelbras-d28c3378.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ADESIVA MARROM 48MM X 45M PCT C/4 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1425</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2070010854864608684.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ADESIVA TRANSPARENTE 48MM X 40M PCT C/ 4 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4959</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/31273756/fita-adesiva-transparente-48-mm-x-45-m-adelbras-ed03ccf4.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA ADESIVA TRANSPARENTE 48MM X 45M PCT C/4 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1184</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/312737656f1f5e4c1a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE 710 - 18MM X 50M PCT C/6 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2978</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/312737648dd817a742.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE 710 - 24MM X 50M PCT C/5 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2979</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273763d82843a0a8.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE 710 - 48MM X 50M PCT C/2 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2980</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/72206120/e138155830.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA AMARELA 765 18MMX40M PCT C/6 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">3020</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/175956418a158f27807.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA AMARELA 765 48MMX40M PCT C/ 2 -
+                                ADELBRAS</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4252</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <footer class="f-impar">
+                        <div class="links">
+                            <div class="cima"><img src="https://mercadaolojista.s3.amazonaws.com/img/SITE.png"
+                                    width="300px"></div>
+                            <div class="baixo"></div>
+                        </div>
+                        <div class="page"><span class="numero">3</span></div>
+                    </footer>
+    </section>
+    <section class="sheet padding-10mm par">
+        <header>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273757/5647d77450.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA DUPLA FACE VERDE - 12MM X 20M - ADELBRAS</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2985</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+                        <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+                        <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+
+                        <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683763/5f650c85e508b-1600457861-bc20c1737a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA AMARELA 18MMX40M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4633</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/19468382373c9949256.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA AMARELA 24MMX40M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4622</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683768/d_nq_np_982605-mla50142728922_052022-o-lwmubs.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA AMARELA 48MMX40M PCT C/ 6 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4632</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2160914187c0660a33f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA VERDE 525 24MMX50M PCT C/ 12 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5166</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/216091424f07fdfcab1.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA VERDE 525 48MMX50M PCT C/ 6 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5167</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2074306913cbe402c05.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE AUTOMOTIVA VERDE 525S 18MMX50M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4981</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683819/164515-e8d71d067f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE USO GERAL 423 18MMX50M PCT C/ 6 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4623</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683807/164516-497ebd0934.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE USO GERAL 423 24MMX50M PCT C/ 5 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4625</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683813/164517-a28f284691.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA CREPE USO GERAL 423 48MMX50M PCT C/ 2 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4624</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2160914298bfdecff22.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA DUPLA FACE MASSA ACRÍLICA TRANSPARENTE XT100
+                                19MMX20M - ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5165</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683779/d_nq_np_2x_897363-mlb49481466249_032022-f-bfc2fb839f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA EMPACOTAMENTO MARROM 706U 45MMX40M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4630</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/20743068707822cfbf7.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA EMPACOTAMENTO TRANSPARENTE 710 45MMX40M PCT C/ 4 -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4980</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <footer class="f-par">
+                        <div class="page"><span class="numero">4</span></div>
+                        <div class="links">
+                            <div class="cima"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png"
+                                    alt="" srcset="" width="120px"></div>
+                            <div class="baixo"></div>
+                        </div>
+                    </footer>
+    </section>
+    <section class="sheet padding-10mm">
+        <header>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683789/5db2f15c61b80-1572008284-e8f184ef9d.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA FORTE DUPLA FACE ESPUMA BRANCA DECORAÇÃO &
+                                ARTESANATO 19MMX1,5M - ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4628</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683772/5db2f15c61b80-1572008284-f48df3b19f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA FORTE DUPLA FACE ESPUMA BRANCA DECORAÇÃO &
+                                ARTESANATO 24MMX1,5M - ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4631</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683783/300388-4-c0a896949c.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA FORTE DUPLA FACE TRANSPARENTE 12MMX20M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4629</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683801/300388-4-fd196ba092.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA FORTE DUPLA FACE TRANSPARENTE 12MMX2M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4626</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img
+                                src="https://cdn.awsli.com.br/718/718365/produto/194683795/300388-4-fdf64e933d.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FITA FORTE DUPLA FACE TRANSPARENTE 19MMX2M -
+                                ADERE</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4627</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+                        <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+                        <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+
+                        <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/21323156680c379cbdc.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 100X2,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5109</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231551c91ad1ae3c.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 100X2,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5110</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231542d16761685a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 140X2,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5111</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132315301917aeaca1.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 140X2,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5112</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231516062e981777.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 180X3,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5113</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132315090c1105a1e3.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 180X3,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5114</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231500f9cce2b039.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 200X2,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5115</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132314939ddce8589b.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 200X2,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5116</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <footer class="f-impar">
+                        <div class="links">
+                            <div class="cima"><img src="https://mercadaolojista.s3.amazonaws.com/img/SITE.png"
+                                    width="300px"></div>
+                            <div class="baixo"></div>
+                        </div>
+                        <div class="page"><span class="numero">5</span></div>
+                    </footer>
+    </section>
+    <section class="sheet padding-10mm par">
+        <header>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132314907386078d38.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 200X3,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5117</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132314852895b0f051.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 200X3,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5118</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231479dca34fcc23.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 250X4,8 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5119</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231473608e31f8ab.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 280X3,5 BRANCA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5120</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132314609dd7163b8c.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 280X3,5 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5121</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/21323145594e91572b7.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ABRAÇADEIRAS NYLON 500X4,8 PRETA (100PCS) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5122</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/20743067806478fffe9.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">CÂMARA DE AR 3,25" X 8" - AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4978</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430605fb629099d8.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">ESGUICHO 5 JATOS - AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4968</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2074306159e83b819a6.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FIO DE NYLON PARA ROÇADEIRA 2MM X 15M - AJAX</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4969</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430623d699ce8fec.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FIO DE NYLON PARA ROÇADEIRA 3MM X 50M - AJAX</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4970</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2074306442d65a76929.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">LÂMINA PARA ESTILETE 18MM TUBETE C/10 - AJAX</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4973</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2074306826718f9ff7a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">PNEU PARA CARRIOLA 3,25X8" 2L DUAS LONAS -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4979</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2074306671e7eeb4411.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">REGISTRO ESFERA METAL VAZÃO TOTAL 1'' - AJAX</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4976</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/20743067312e88817f6.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">REGISTRO ESFERA METAL VAZÃO TOTAL 1.1/2'' -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4977</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430653c45cd8f2c6.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">REGISTRO ESFERA METAL VAZÃO TOTAL 1/2'' -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4974</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430663e990f14b1a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">REGISTRO ESFERA METAL VAZÃO TOTAL 3/4'' -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4975</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <footer class="f-par">
+                        <div class="page"><span class="numero">4</span></div>
+                        <div class="links">
+                            <div class="cima"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png"
+                                    alt="" srcset="" width="120px"></div>
+                            <div class="baixo"></div>
+                        </div>
+                    </footer>
+    </section>
+    <section class="sheet padding-10mm">
+        <header>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132316354bca2e7382.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">SUPORTE PARA PRATELEIRA 20X12MM (MÃO FRANCESA) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5104</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231621b7e98d2c68.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">SUPORTE PARA PRATELEIRA 25X16MM (MÃO FRANCESA) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5105</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231608b1fe10dc4a.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">SUPORTE PARA PRATELEIRA 30X19MM (MÃO FRANCESA) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5106</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430629be0f80be01.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">SUPORTE PARA PRATELEIRA 40X25MM (MÃO FRANCESA) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4971</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/2132315947e3c942c24.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">SUPORTE PARA PRATELEIRA 50X30MM (MÃO FRANCESA) -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5107</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/213231580e9d5d23785.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">TORNEIRA REGISTRO ESFERA P/ MÁQUINA DE LAVAR 1/2 X 3/4 -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5108</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/207430637d83abd5aa4.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">TRENA AÇO EMBORRACHADA 10M X 25MM C/ IMÃ -
+                                AJAX</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4972</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--OCULTO--:inicio -->
+                    <li class="oculto"><!--OCULTO--:fim -->
+
+                        <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/57798773/bede35b8b5.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">CABIDE DUPLO/ GANCHO GRANDE (CX/20) - ALIANÇA</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2513</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/57798779/883bc2f531.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">CABIDE SIMPLES GANCHO GRANDE (CX/20) -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2512</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/57798782/157aafcd51.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">CABIDE SIMPLES/ GANCHO/ PEQUENO (CX/40) -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">2511</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273791b09a244bbb.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">CILINDRO FECHADURA ROSCADO C400 CR - ALIANÇA</span><span
+                                class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1200</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236590/c4a16cdd52.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">DOBRADIÇA PORTA 3.1/2X2.1/2" (1,20) 81500C BRONZE
+                                LATONADO - ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4358</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/212587449b424005c6f.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA EXTERNA ESTREITA F-2400 INOX POLIDO -
+                                ALIANCA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">5098</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273796/42a1eee73e.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA INOX PREMIUM / EXT 2600 / 71 IP -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1195</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273795/067157330d.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA INOX PREMIUM / INT 2700 / 71 IP -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1196</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <footer class="f-impar">
+                        <div class="links">
+                            <div class="cima"><img src="https://mercadaolojista.s3.amazonaws.com/img/SITE.png"
+                                    width="300px"></div>
+                            <div class="baixo"></div>
+                        </div>
+                        <div class="page"><span class="numero">5</span></div>
+                    </footer>
+    </section>
+    <section class="sheet padding-10mm par">
+        <header>
+            <div class="logo"><img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" alt=""
+                    srcset="" width="100%"></div>
+            <div class="textos">
+                <div class="baixo">
+                    <ul class="listaLang">
+                        <li class="lang"> Catálogo de Produtos</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="produtos">
+
+                    <!--Marca--:inicio -->
+                    <li class="linha"><br>
+                        <hr>
+                    </li>
+                    <li class="linha-marca"><img src="https://cdn.awsli.com.br/718/718365/marca/15503192/075b37e17e.png"
+                            alt="" srcset="" width="100%"></li>
+                    <li class="linha"><br>
+                        <hr>
+                    </li><!--Marca--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/31273794/6c19698caf.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA INOX PREMIUM / WC 2800 / 71 IP -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">1197</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236985/8606794626.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY EXTERNO F-2600/241 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4343</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236928/ae9632dd60.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY EXTERNO F-2600/241 INOX POLIDO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4346</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236878/106e193be0.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY EXTERNO F-2600/63 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4349</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236811/6ff86b07ed.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY EXTERNO F-2600/63 INOX POLIDO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4352</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236953/d3fd5a52ab.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY INTERNO F-2700/241 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4344</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236922/2dacf99f56.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY INTERNO F-2700/241 INOX POLIDO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4347</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236865/86ccd78648.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY INTERNO F-2700/63 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4350</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236776/e3a1640411.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY INTERNO F-2700/63 INOX POLIDO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4353</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236949/1d9906d57d.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY WC F-2800/241 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4345</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236916/fdaf8caebf.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY WC F-2800/241 INOX POLIDO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4348</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->
+                    <!--Produto--:inicio -->
+                    <li class="produto">
+                        <div class="img"><img src="https://cdn.awsli.com.br/718/718365/produto/180236821/b125212135.jpg"
+                                alt=""></div>
+                        <div class="textos"><span class="nome">FECHADURA JOY WC F-2800/63 BRONZE LATONADO -
+                                ALIANÇA</span><span class="dado">
+                                <p class="label">Cód:</p>
+                                <p class="codigo">4351</p>
+                            </span></div>
+                    </li><!--Produto--:fim -->

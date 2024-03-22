@@ -1,0 +1,168 @@
+@import "variaveis.scss";
+
+.bodyChiaperini{
+
+    background-color: $azulPrincipal;
+        
+    .headerChiaperini{
+
+        padding: 10px 0;
+        
+        .nav{
+
+            .nav-link{
+                
+                color: $amareloPrincipal;
+                font-weight: bold;
+
+                &:hover{
+
+                    color: $azulPrincipal;
+                    background-color: $amareloPrincipal;
+                    border-radius: 5px;
+
+                }
+            }
+        }
+
+    }
+
+
+        
+    .mainChiaperini{
+
+        .container{
+
+            .title1{
+                
+                text-align: center;
+                color: $azulPrincipal;
+                font-weight: 700;
+            }
+        
+            form{
+        
+                .pesquisa{
+        
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+        
+                    .barraPesquisa{
+        
+                        border-radius: 5px;
+                    }
+        
+                    .btn{
+                        
+                        width: 200px;
+                        padding: 8px 35px;
+                        color: $azulPrincipal;
+                        background-color: $branco;
+                        font-weight: 700;
+        
+                        
+                        &:hover{
+                                    
+                            color: $azulPrincipal;
+                            border: 1px solid $azulPrincipal;
+                            background-color: $amareloPrincipal;
+
+        
+                        }
+                    }
+                }
+            }
+        
+            table{
+        
+                background-color: $branco;
+                border-radius: 0;
+        
+            
+                thead{
+            
+                    tr{
+            
+                        th{
+                            
+                            background-color: $amareloPrincipal;              
+                            color: $azulPrincipal;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        .firstTh{
+
+                            border-radius: 5px 0 0 0  !important;
+                        }
+
+                        .lastTh{
+
+                            border-radius: 0 5px 0 0  !important;
+                        }
+                    }
+                }
+            
+            
+                tbody{
+            
+                    border-radius: 0px !important;   
+            
+                    tr{
+
+                        border-radius: 0px !important;            
+            
+                        td{
+
+                            border-radius: 0px !important;   
+            
+                            color: $azulPrincipal;
+                            text-align: center;
+                            font-weight: 600;
+                            border-top: 1px solid $azulPrincipal !important;
+                            text-transform: capitalize;
+            
+            
+            
+            
+                            .btnLigar{
+                                
+                                background-color: $azulPrincipal;
+                                color: $branco;
+                                font-weight: bold;
+                                padding: 8px 20px;
+                                border-radius: 3px;
+            
+            
+                                &:hover{
+                                    
+                                    color: $azulPrincipal;
+                                    border: 1px solid $azulPrincipal;
+                                    background-color: $branco;
+            
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .table-hover tbody tr:hover td {
+                background-color: $azulClaro;
+            }
+            
+        
+        }
+    }
+
+    .footerChiaperini{
+        
+        .dataUp{
+            color: $amareloPrincipal;
+
+        }
+    }
+
+}
