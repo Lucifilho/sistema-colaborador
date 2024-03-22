@@ -123,6 +123,20 @@ footer{
 }
 
 
+footer.index{
+   
+    .version{
+
+      
+        .number{
+
+            color:$azulPrincipal !important;
+            font-weight: 900;
+        }
+    }
+}
+
+
 footer.chiaperini{
 
     background-color: $azulPrincipal;

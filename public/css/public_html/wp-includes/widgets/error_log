@@ -1,0 +1,44 @@
+[31-Aug-2022 18:52:49 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[13-Sep-2022 23:36:41 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[13-Oct-2022 11:20:07 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-nav-menu-widget.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-nav-menu-widget.php on line 17
+[14-Oct-2022 06:56:20 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget_Media" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-video.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-video.php on line 18
+[16-Oct-2022 09:36:16 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget_Media" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-audio.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-audio.php on line 18
+[17-Oct-2022 06:23:18 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-archives.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-archives.php on line 17
+[17-Oct-2022 06:24:49 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-archives.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-archives.php on line 17
+[19-Oct-2022 06:07:01 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-recent-comments.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-recent-comments.php on line 17
+[19-Oct-2022 18:59:02 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget_Media" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-gallery.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-gallery.php on line 18
+[19-Oct-2022 19:03:40 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget_Media" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-gallery.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-media-gallery.php on line 18
+[19-Oct-2022 19:31:25 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-pages.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/widgets/class-wp-widget-pages.php on line 17

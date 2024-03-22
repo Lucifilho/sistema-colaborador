@@ -1,0 +1,4 @@
+[26-Oct-2023 21:04:34 UTC] PHP Fatal error:  Uncaught Error: Class "WP_REST_Meta_Fields" not found in /home/chiap19/public_html/wp-includes/rest-api/fields/class-wp-rest-comment-meta-fields.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/rest-api/fields/class-wp-rest-comment-meta-fields.php on line 17

@@ -1,0 +1,8 @@
+[14-Oct-2022 08:44:08 UTC] PHP Fatal error:  Uncaught Error: Interface "Requests_Hooker" not found in /home/chiap19/public_html/wp-includes/Requests/Hooks.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/Requests/Hooks.php on line 15
+[14-Oct-2022 08:45:48 UTC] PHP Fatal error:  Uncaught Error: Interface "Requests_Hooker" not found in /home/chiap19/public_html/wp-includes/Requests/Hooks.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/Requests/Hooks.php on line 15

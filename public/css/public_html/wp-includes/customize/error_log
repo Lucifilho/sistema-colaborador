@@ -1,0 +1,88 @@
+[05-Oct-2022 20:55:07 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-locations-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-locations-control.php on line 17
+[06-Oct-2022 17:14:59 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Panel" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menus-panel.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menus-panel.php on line 19
+[06-Oct-2022 19:03:54 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-cropped-image-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-cropped-image-control.php on line 17
+[07-Oct-2022 13:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-background-position-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-background-position-control.php on line 17
+[08-Oct-2022 01:57:19 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-theme-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-theme-control.php on line 17
+[08-Oct-2022 09:26:56 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Section" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-section.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-section.php on line 19
+[08-Oct-2022 09:48:51 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Setting" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-setting.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-setting.php on line 21
+[08-Oct-2022 21:52:19 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-control.php on line 17
+[09-Oct-2022 01:56:24 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-widget-area-customize-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-widget-area-customize-control.php on line 17
+[09-Oct-2022 06:18:13 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-code-editor-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-code-editor-control.php on line 17
+[09-Oct-2022 06:44:30 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Setting" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-filter-setting.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-filter-setting.php on line 19
+[10-Oct-2022 03:38:23 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php on line 17
+[10-Oct-2022 14:11:40 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-media-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-media-control.php on line 17
+[10-Oct-2022 18:49:26 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-background-image-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-background-image-control.php on line 17
+[12-Oct-2022 06:33:16 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Setting" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-item-setting.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-nav-menu-item-setting.php on line 20
+[12-Oct-2022 07:30:08 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Setting" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-header-image-setting.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-header-image-setting.php on line 19
+[13-Oct-2022 09:03:26 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-date-time-control.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-date-time-control.php on line 17
+[14-Oct-2022 01:52:49 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Section" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-sidebar-section.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-sidebar-section.php on line 17
+[13-Apr-2023 11:42:56 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Cropped_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php on line 19
+[13-Apr-2023 11:45:57 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Cropped_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php on line 19
+[14-Apr-2023 22:26:03 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Cropped_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php on line 19
+[24-May-2023 06:39:03 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Customize_Cropped_Image_Control" not found in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/customize/class-wp-customize-site-icon-control.php on line 19

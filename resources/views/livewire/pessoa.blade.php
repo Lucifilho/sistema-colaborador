@@ -24,7 +24,7 @@
                 <th class="firstTh">Ramal</th>
                 <th>Nome</th>
                 <th>Whatsapp</th>
-                <th>Departamento</th>
+                <th class="esconder">Departamento</th>
                 <th>Unidade</th>
                 <th class="lastTh">Ligar via Microsip</th>
             </tr>
@@ -44,32 +44,13 @@
                 
                 </td>
                 <td>{{$pessoa -> Whatsapp}}</td>
-                <td>{{$pessoa -> Departamento}}</td>
+                <td class="esconder">{{$pessoa -> Departamento}}</td>
                 <td>{{$pessoa -> Unidade}}</td>
                 <td>
                     <div class="actions">
 
                         <a class="btnLigar" href="tel:{{$pessoa -> Ramal}}"><i class="fa fa-phone"></i></a>
 
-                        @if ($pessoa -> Email != '')
-
-                        <a class="btnLigar" href="mailto:{{$pessoa -> Email}}"><i class="fa fa-envelope"></i></a>
-
-                        @else
-                        
-
-                        @endif 
-
-                        @if ($pessoa -> Whatsapp != '')
-
-                        <a class="btnLigar" target="_blank" href="https://api.whatsapp.com/send?phone={{$pessoa -> Whatsapp}}">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-
-                        @else
-                        
-
-                        @endif 
                     </div>
                        
 
@@ -95,11 +76,13 @@
 
     @endif
     
-        <div class="navigation">
 
-            {{ $pessoas -> links() }}           
+    <div class="navigation">
 
-        </div>
+        {{ $pessoas -> links() }}           
+
+    </div>
+        
 
     </div>
 </div>

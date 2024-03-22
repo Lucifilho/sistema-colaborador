@@ -13,7 +13,7 @@
             </p>
             <br>
                 <table>
-                    <td width="300px" >
+                    <td width="100%" >
                         @if($pessoa -> Unidade === 'Chiaperini')
                         
                         <img src="http://www.chiaperini.com.br/assinatura-de-email/img/chiaperini.jpg" title="Chiaperini" alt="Chiaperini" width="250px" >
@@ -36,9 +36,9 @@
                         <img src="https://cdn.awsli.com.br/400x300/718/718365/logo/03d33c1390.png" title="Chiaperini" alt="Chiaperini" width="250px" >
                         
                         
-                        @elseif( $pessoa -> Unidade === 'Techtopel')
+                        @elseif( $pessoa -> Unidade === 'techtoPel')
                         
-                        <img src="https://techto.com.br/wp-content/uploads/2019/02/logo-techto.png" title="Chiaperini" alt="Chiaperini" width="250px" >
+                        <img src="https://chramais.s3.amazonaws.com/images/techtopelLogo.png" title="Techtopel" alt="Techtopel" width="180px" >
 
                         @else
 

@@ -1,0 +1,132 @@
+[01-Oct-2022 07:23:26 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/typography.php:217
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/typography.php on line 217
+[01-Oct-2022 07:26:29 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/typography.php:217
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/typography.php on line 217
+[06-Oct-2022 10:18:24 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/layout.php:226
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/layout.php on line 226
+[08-Oct-2022 08:57:43 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/colors.php:152
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/colors.php on line 152
+[10-Oct-2022 12:08:08 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php on line 67
+[13-Oct-2022 19:25:27 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/spacing.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/spacing.php on line 83
+[19-Mar-2023 18:02:00 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/typography.php:580
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/typography.php on line 580
+[30-Mar-2023 12:25:42 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/border.php:168
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/border.php on line 168
+[30-Mar-2023 12:30:12 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/border.php:168
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/border.php on line 168
+[09-Apr-2023 15:29:02 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/align.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/align.php on line 59
+[20-Apr-2023 01:49:29 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/duotone.php:591
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/duotone.php on line 591
+[20-Apr-2023 01:51:59 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/duotone.php:591
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/duotone.php on line 591
+[22-Apr-2023 22:49:13 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/colors.php:123
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/colors.php on line 123
+[28-Apr-2023 02:21:25 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/dimensions.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/dimensions.php on line 82
+[01-May-2023 12:46:23 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-include[04-May-2023 13:28:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/chiap19/public_html/wp-includes/block-supports/elements.php:110
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/elements.php on line 110
+[04-May-2023 13:33:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/chiap19/public_html/wp-includes/block-supports/elements.php:110
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/elements.php on line 110
+[09-May-2023 13:18:38 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/typography.php:591
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/typography.php on line 591
+[09-May-2023 13:20:40 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/typography.php:591
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/typography.php on line 591
+[15-May-2023 21:59:12 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/layout.php:523
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/layout.php on line 523
+[15-May-2023 22:02:00 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/layout.php:523
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/layout.php on line 523
+[20-May-2023 01:34:01 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php:66
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php on line 66
+[20-May-2023 01:35:27 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php:66
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php on line 66
+[23-May-2023 03:27:34 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/spacing.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/spacing.php on line 76
+[23-May-2023 03:30:27 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/spacing.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/spacing.php on line 76
+[27-May-2023 19:20:14 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php:66
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/generated-classname.php on line 66
+[12-Aug-2023 06:13:12 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/spacing.php:76
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/spacing.php on line 76
+[14-Sep-2023 12:00:34 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/align.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/align.php on line 59
+[15-Sep-2023 09:59:48 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/custom-classname.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/custom-classname.php on line 59
+[26-Sep-2023 13:19:49 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/colors.php:123
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/colors.php on line 123
+[03-Oct-2023 12:12:11 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/duotone.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/duotone.php on line 36
+[03-Oct-2023 20:18:08 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/dimensions.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/dimensions.php on line 82
+[12-Oct-2023 12:13:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/chiap19/public_html/wp-includes/block-supports/elements.php:125
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/elements.php on line 125
+[28-Oct-2023 16:41:43 UTC] PHP Fatal error:  Uncaught Error: Class "WP_Block_Supports" not found in /home/chiap19/public_html/wp-includes/block-supports/border.php:168
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/block-supports/border.php on line 168

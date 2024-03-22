@@ -32,7 +32,7 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
 
@@ -45,7 +45,7 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
         $lastDateRecord = Pessoa::latest('updated_at')->first();
@@ -55,11 +55,11 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
         $path = Request::path();
-        
+
         return view('auth.login' , ['path'=> $path,'lastDate' => $lastDate,'userLogged'=> $userLogged ]);
     }
 
@@ -68,7 +68,7 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
         $lastDateRecord = Pessoa::latest('updated_at')->first();
@@ -78,11 +78,11 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
         $path = Request::path();
-        
+
         return view('pages.dashboard' , ['path'=> $path,'lastDate' => $lastDate,'userLogged'=> $userLogged ]);
     }
 
@@ -95,20 +95,20 @@ class EventController extends Controller
 
     public function home (){
 
-        
+
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
         $path = Request::path();
 
         if ($path=="/" ) {
-            
+
             $path = "index";
         }else{
-            
+
             $path = "";
         }
 
@@ -121,7 +121,7 @@ class EventController extends Controller
         } else {
 
             $lastDate = '';
-            
+
         }
 
 
@@ -136,7 +136,7 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
         $path= Request::path();
@@ -149,7 +149,7 @@ class EventController extends Controller
 
             $path = 'colaboradorPage';
         }else{
-            
+
         }
 
         $lastDateRecord = Pessoa::latest('updated_at')->first();
@@ -159,7 +159,7 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
         $pessoa = Pessoa::findOrFail($id);
@@ -173,7 +173,7 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
         $path= Request::path();
@@ -189,7 +189,7 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
         $pessoa = Pessoa::findOrFail($id);
@@ -216,11 +216,11 @@ class EventController extends Controller
 
     public function novoColaboradorPage (){
 
-        
+
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
 
 
@@ -231,24 +231,24 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
         $path= Request::path();
 
         $departamentos = Departamento::all();
 
         $unidades = Unidade::all();
-    
+
         return view('pages.novoColaborador',['departamentos'=> $departamentos, 'userLogged'=> $userLogged, 'unidades' => $unidades, 'path'=>$path, 'lastDate'=> $lastDate] );
 
     }
 
     public function novoPostPage (){
-        
+
             $user = Auth::user();
 
             $userName = $user->name;
-            
+
         return view('pages.novoPost', ['userName' => $userName]);
     }
 
@@ -290,7 +290,7 @@ class EventController extends Controller
         $post -> tags = $request -> tags;
         $post -> categorias = $request -> categorias;
         $post -> conteudo = $request -> conteudo;
-       
+
 
         if ($request -> hasFile('imagePost') && $request->file('imagePost')->isValid()){
 
@@ -330,9 +330,9 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
-        
+
         $lastDateRecord = Pessoa::latest('updated_at')->first();
 
         if ($lastDateRecord) {
@@ -340,7 +340,7 @@ class EventController extends Controller
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
 
         } else {
-            
+
         }
 
         $path= Request::path();
@@ -348,21 +348,21 @@ class EventController extends Controller
         $search = "ola";
 
         $pessoas = Pessoa::paginate(15);
-        
+
         $all = Pessoa::all()->toArray();
 
-        
+
 
         return view('pages.ramais' , [
-            'pessoas' => $pessoas, 'search'=> $search, 
+            'pessoas' => $pessoas, 'search'=> $search,
             'path' => $path,
             'lastDate' => $lastDate,
             'userLogged' => $userLogged
-        
+
         ]);
-        
-            
-       
+
+
+
     } */
 
     public function ramaisPage (){
@@ -370,34 +370,30 @@ class EventController extends Controller
         if (Auth::check()) {
             $userLogged = Auth::user()->name;
         } else {
-            $userLogged = "Guest"; 
+            $userLogged = "Guest";
         }
-    
+
         $lastDateRecord = Pessoa::latest('updated_at')->first();
-    
+
         if ($lastDateRecord) {
             $lastDate = $lastDateRecord->updated_at->format('d/m/Y');
         } else {
-            $lastDate = null; // 
+            $lastDate = null; //
         }
-    
+
         $path = Request::path();
         $search = "ola";
-    
+
         $pessoas = Cache::rememberForever('pessoas', function () {
             return Pessoa::paginate(15);
         });
-    
+
         return view('pages.ramais', [
             'pessoas' => $pessoas,
-            'search' => $search, 
+            'search' => $search,
             'path' => $path,
             'lastDate' => $lastDate,
             'userLogged' => $userLogged
         ]);
     }
-    
-
-
-
 }

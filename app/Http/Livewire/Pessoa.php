@@ -5,19 +5,35 @@ use App\Models\Pessoa as Pessoas;
 use Livewire\Component;
 use App\Models\Unidade;
 use Request;
+use Livewire\WithPagination;
 
 class Pessoa extends Component
 {
-    public $search = '';
+    use WithPagination;
 
-    protected $queryString = ['search'];
+    protected $paginationTheme = 'bootstrap';
 
+    public $search ;
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+     
     public function render()
     {
 
         $previousUrl = url()->previous();
 
         $search = $this->search;
+
+        if ($search === '') {
+            $search =' ';
+        } else {
+            $search = $search;
+        }
+
+               
 
         if($search){
 
@@ -32,6 +48,19 @@ class Pessoa extends Component
 
             $path = Request::path();
 
+            if($path === "livewire/message/pessoa"){
+            
+                $path = explode('/', $previousUrl);
+                $path = $path[3];
+                $newPath = explode('?', $path);
+                $newPath= $newPath[0];
+                $path = $newPath;                
+    
+            }else{
+    
+                $path= $path;
+    
+            }
 
         }
         
@@ -77,8 +106,8 @@ class Pessoa extends Component
             ->paginate(5);
         }
 
-     
 
+       
 
         return view('livewire.pessoa', [
 

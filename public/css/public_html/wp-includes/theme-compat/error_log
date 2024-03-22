@@ -1,0 +1,12 @@
+[12-Oct-2022 22:20:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function do_action() in /home/chiap19/public_html/wp-includes/theme-compat/footer-embed.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/theme-compat/footer-embed.php on line 18
+[16-Oct-2022 17:32:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/chiap19/public_html/wp-includes/theme-compat/header.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/theme-compat/header.php on line 9
+[19-Oct-2022 20:04:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/chiap19/public_html/wp-includes/theme-compat/footer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/chiap19/public_html/wp-includes/theme-compat/footer.php on line 9

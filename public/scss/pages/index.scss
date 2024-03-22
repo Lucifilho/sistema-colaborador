@@ -14,13 +14,22 @@
 
         h1{
 
-            font-size: 70px;
+            font-size: $fs70;
             font-weight: 500;
 
             .negrito{
 
                 font-weight: bold;
             }
+        }
+
+        @media only screen and (max-width:768px){
+                        
+            h1{
+                
+                font-size: $fs45;
+            }            
+            
         }
 
        
@@ -40,7 +49,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
 
             h2{
                 
@@ -54,13 +64,15 @@
 
             flex-direction: column;
             gap: 10px ;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;            
             margin: 0;
             padding: 0;
             
             li{
 
-                width: 600px;
+                width: 100%;
+                max-width: 600px;
                 list-style-type: none;
 
                 
